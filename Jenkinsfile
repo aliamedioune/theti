@@ -6,7 +6,7 @@ pipeline {
       stage('Get Repo') {
             steps {
                 sh 'sudo rm -r /var/jenkins_home/workspace/CICDWORKFLOW/*'
-                git branch: 'main', url: 'https://github.com/YourAWS-Bilal/cicd'           
+                git branch: 'main', url: 'https://github.com/aliamedioune/theti'           
             }
         }     
     stage('old build down') {
