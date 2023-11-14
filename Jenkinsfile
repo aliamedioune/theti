@@ -5,15 +5,15 @@ pipeline {
 
       stage('Get Repo') {
             steps {
-                sh 'sudo rm -r /var/jenkins_home/workspace/CICDWORKFLOW/*'
+                sh 'sudo rm -r /var/jenkins_home/workspace/mysimpleproject/*'
                 git branch: 'main', url: 'https://github.com/aliamedioune/theti'           
             }
         }     
     stage('old build down') {
             steps {
                sh 'sudo chmod 777 -R /var/run/docker.sock'
-               sh 'sudo chmod 777 -R /var/jenkins_home/workspace/CICDWORKFLOW/'
-               sh 'cd /var/jenkins_home/workspace/CICDWORKFLOW/docker && docker compose down'
+               sh 'sudo chmod 777 -R /var/jenkins_home/workspace/mysimpleproject/'
+               sh 'cd /var/jenkins_home/workspace/mysimpleproject/docker && docker compose down'
             }
         }
    
@@ -21,12 +21,12 @@ pipeline {
         
     stage('Build UP') {
             steps {
-               sh 'cd /var/jenkins_home/workspace/CICDWORKFLOW/docker && docker compose up -d --build' 
+               sh 'cd /var/jenkins_home/workspace/mysimpleproject/docker && docker compose up -d --build' 
             }
         }
     stage('Test') {
             steps {
-               sh 'cd /var/jenkins_home/workspace/CICDWORKFLOW && phpunit --log-junit result.xml UnitTestFiles/Test/'
+               sh 'cd /var/jenkins_home/workspace/mysimpleproject && phpunit --log-junit result.xml UnitTestFiles/Test/'
             }
         }
 
