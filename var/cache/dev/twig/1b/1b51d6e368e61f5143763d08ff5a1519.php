@@ -155,7 +155,7 @@ class __TwigTemplate_bee625bcdb27f3fd0a54ce5fcd6ac13c extends Template
         </div>
 
         <!-- Adjust background color and add border -->
-        <div class=\"card border-success contentCodeCadeau col-sm-6 mt-4 \" style=\"background-color: rgba(245, 225, 235, 0.8)\" id=\"blockTicketcRecord\" hidden=true >
+        <div class=\"card border-success contentCodeCadeau col-sm-6 mt-4 \" style=\"background-color: rgba(245, 225, 235, 0.8)\" id=\"blockTicketcRecord\" hidden=false >
                             <div class=\"card-body\">
                             <h4 class=\"card-title\">Mes Gains :</h4>
                             ";
@@ -198,7 +198,9 @@ class __TwigTemplate_bee625bcdb27f3fd0a54ce5fcd6ac13c extends Template
 <script src=\"https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.js\"></script>
 
 <script>
-
+function myFunction() {
+  alert(document.getElementById(\"myP\").style.color);
+}
 
 \$(document).on('click','#submitCodeCadeau',function(e){
     e.preventDefault();
@@ -237,8 +239,8 @@ class __TwigTemplate_bee625bcdb27f3fd0a54ce5fcd6ac13c extends Template
                 else{
                     result = document.getElementById('result');
                     result.style = \"color:white;\";
-                    result.innerHTML = \"vous avez remporter un: \"+\$data+\" !\";
-                    setTimeout(function(){result.innerHTML = \"\";},2000);
+                    result.innerHTML = \"BRAVO vous avez remporter un: \"+\$data+\" !\";
+                    setTimeout(function(){result.innerHTML = \"\";},2000000);
                 }
             }
 
@@ -373,7 +375,7 @@ class __TwigTemplate_bee625bcdb27f3fd0a54ce5fcd6ac13c extends Template
         </div>
 
         <!-- Adjust background color and add border -->
-        <div class=\"card border-success contentCodeCadeau col-sm-6 mt-4 \" style=\"background-color: rgba(245, 225, 235, 0.8)\" id=\"blockTicketcRecord\" hidden=true >
+        <div class=\"card border-success contentCodeCadeau col-sm-6 mt-4 \" style=\"background-color: rgba(245, 225, 235, 0.8)\" id=\"blockTicketcRecord\" hidden=false >
                             <div class=\"card-body\">
                             <h4 class=\"card-title\">Mes Gains :</h4>
                             {% if ticketsCount > 0 %}
@@ -395,7 +397,9 @@ class __TwigTemplate_bee625bcdb27f3fd0a54ce5fcd6ac13c extends Template
 <script src=\"https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.js\"></script>
 
 <script>
-
+function myFunction() {
+  alert(document.getElementById(\"myP\").style.color);
+}
 
 \$(document).on('click','#submitCodeCadeau',function(e){
     e.preventDefault();
@@ -434,8 +438,8 @@ class __TwigTemplate_bee625bcdb27f3fd0a54ce5fcd6ac13c extends Template
                 else{
                     result = document.getElementById('result');
                     result.style = \"color:white;\";
-                    result.innerHTML = \"vous avez remporter un: \"+\$data+\" !\";
-                    setTimeout(function(){result.innerHTML = \"\";},2000);
+                    result.innerHTML = \"BRAVO vous avez remporter un: \"+\$data+\" !\";
+                    setTimeout(function(){result.innerHTML = \"\";},2000000);
                 }
             }
 

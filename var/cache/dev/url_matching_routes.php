@@ -33,6 +33,7 @@ return [
         '/faq' => [[['_route' => 'faq', '_controller' => 'App\\Controller\\HomeController::faq'], null, null, null, false, false, null]],
         '/terms-and-conditions' => [[['_route' => 'terms-and-conditions', '_controller' => 'App\\Controller\\HomeController::termsAndCondition'], null, null, null, false, false, null]],
         '/bienvenu' => [[['_route' => 'app_bienvenu', '_controller' => 'App\\Controller\\HomeController::bienvenu'], null, null, null, false, false, null]],
+        '/mesgains' => [[['_route' => 'app_mesgains', '_controller' => 'App\\Controller\\HomeController::mesgains'], null, null, null, false, false, null]],
         '/profil' => [[['_route' => 'profil', '_controller' => 'App\\Controller\\HomeController::profilAction'], null, null, null, false, false, null]],
         '/mentions' => [[['_route' => 'mentions', '_controller' => 'App\\Controller\\HomeController::montionAction'], null, null, null, false, false, null]],
         '/codecadeau/check' => [[['_route' => 'app_code_cadeau_check', '_controller' => 'App\\Controller\\HomeController::codecadeauCheck'], null, null, null, false, false, null]],

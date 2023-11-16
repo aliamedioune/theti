@@ -17,37 +17,63 @@ use Symfony\Component\Validator\Constraints\NotBlank;
 use Symfony\Component\Validator\Constraints\Regex;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\IntegerType;
-
+use Symfony\Component\Validator\Constraints as Assert;
 
 class RegistrationFormType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
+
+        
         $builder
-            ->add('surname', TextType::class,[
-                'attr'=>[
-                    'placeholder'=>'Entrer votre prénom !'
-                ]
+            ->add('surname', TextType::class, [
+                'constraints' => [
+                    new Assert\Regex([
+                        'pattern' => '/^[a-zA-Z\s\-]+$/',
+                        'message' => 'Votre prénom ne peut pas contenir de chiffres.',
+                    ]),
+                ],
+                'attr' => [
+                    'placeholder' => 'Entrez votre prénom !'
+                ],
             ])
-            ->add('name', TextType::class,[
-                'attr'=>[
-                    'placeholder'=>'Entrer votre nom !'
-                ]
+            ->add('name', TextType::class, [
+                'constraints' => [
+                    new Assert\Regex([
+                        'pattern' => '/^[a-zA-Z\s\-]+$/',
+                        'message' => 'Votre nom ne peut pas contenir de chiffres.',
+                    ]),
+                ],
+                'attr' => [
+                    'placeholder' => 'Entrez votre nom !'
+                ],
             ])
             ->add('address', TextType::class,[
                 'attr'=>[
                     'placeholder'=>'Entrer votre adresse postale !'
                 ]
             ])
-            ->add('city', TextType::class,[
-                'attr'=>[
-                    'placeholder'=>'Entrer votre ville !'
-                ]
+            ->add('city', TextType::class, [
+                'constraints' => [
+                    new Assert\Regex([
+                        'pattern' => '/^[a-zA-Z\s\-]+$/',
+                        'message' => 'Votre ville ne peut pas contenir de chiffres.',
+                    ]),
+                ],
+                'attr' => [
+                    'placeholder' => 'Entrez votre ville !'
+                ],
             ])
-            ->add('country', TextType::class,[
-                'attr'=>[
-                    'placeholder'=>'Entrer votre pays !'
-                ]
+            ->add('country', TextType::class, [
+                'constraints' => [
+                    new Assert\Regex([
+                        'pattern' => '/^[a-zA-Z\s\-]+$/',
+                        'message' => 'Votre pays ne peut pas contenir de chiffres.',
+                    ]),
+                ],
+                'attr' => [
+                    'placeholder' => 'Entrez votre pays !'
+                ],
             ])
             ->add('aboutUs', ChoiceType::class,[
                 'choices'  => [

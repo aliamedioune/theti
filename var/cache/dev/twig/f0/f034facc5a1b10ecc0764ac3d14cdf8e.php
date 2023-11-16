@@ -127,7 +127,7 @@ class __TwigTemplate_8b6fe5584d48d48172552c391247b82f extends Template
           <p class=\"card-text\">";
         // line 26
         echo twig_escape_filter($this->env, (twig_length_filter($this->env, (isset($context["ticketsdis"]) || array_key_exists("ticketsdis", $context) ? $context["ticketsdis"] : (function () { throw new RuntimeError('Variable "ticketsdis" does not exist.', 26, $this->source); })())) - twig_length_filter($this->env, (isset($context["ticketwin"]) || array_key_exists("ticketwin", $context) ? $context["ticketwin"] : (function () { throw new RuntimeError('Variable "ticketwin" does not exist.', 26, $this->source); })()))), "html", null, true);
-        echo "  Tickets </p>
+        echo "  /100   Tickets </p>
         </div>
       </div>
     </div>
@@ -437,7 +437,7 @@ class __TwigTemplate_8b6fe5584d48d48172552c391247b82f extends Template
       <div class=\"card bg-light\">
         <div class=\"card-body\">
           <h5 class=\"card-title\">Tickets restant</h5>
-          <p class=\"card-text\">{{  ticketsdis|length - ticketwin|length }}  Tickets </p>
+          <p class=\"card-text\">{{  ticketsdis|length - ticketwin|length }}  /100   Tickets </p>
         </div>
       </div>
     </div>

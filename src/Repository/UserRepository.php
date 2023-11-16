@@ -109,4 +109,24 @@ class UserRepository extends ServiceEntityRepository implements PasswordUpgrader
 //            ->getOneOrNullResult()
 //        ;
 //    }
+
+
+    public function findAllUsersWithGains()
+    {
+        // Obtenez le gestionnaire d'entité
+        $entityManager = $this->getEntityManager();
+
+        // Créez une requête qui sélectionne tous les utilisateurs ayant au moins un gain non envoyé
+        $query = $entityManager->createQuery(
+            'SELECT u, w
+            FROM App\Entity\User u
+            INNER JOIN u.winningTickets w
+            WHERE w.send = :sentStatus'
+        )->setParameter('sentStatus', false); // ou true, selon les gains que vous voulez récupérer
+
+        // Renvoyez le résultat de la requête
+        return $query->getResult();
+    }
+    
+
 }

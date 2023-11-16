@@ -9,19 +9,13 @@ pipeline {
                 git branch: 'main', url: 'https://github.com/aliamedioune/theti'           
             }
         }     
-    stage('old build down') {
-            steps {
-               sh 'sudo chmod 777 -R /var/run/docker.sock'
-               sh 'sudo chmod 777 -R /var/jenkins_home/workspace/CICDWORKFLOW/'
-               sh 'cd /var/jenkins_home/workspace/CICDWORKFLOW/docker && docker compose down'
-            }
-        }
+    
    
 
         
     stage('Build UP') {
             steps {
-               sh 'cd /var/jenkins_home/workspace/CICDWORKFLOW/docker && docker compose up -d --build' 
+               sh 'docker build -t theti .' 
             }
         }
     stage('Test') {

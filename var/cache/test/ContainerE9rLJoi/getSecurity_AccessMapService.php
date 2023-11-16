@@ -25,7 +25,7 @@ class getSecurity_AccessMapService extends App_KernelTestDebugContainer
         $container->privates['security.access_map'] = $instance = new \Symfony\Component\Security\Http\AccessMap();
 
         $instance->add(new \Symfony\Component\HttpFoundation\RequestMatcher('^/admin'), [0 => 'ROLE_ADMIN'], NULL);
-        $instance->add(new \Symfony\Component\HttpFoundation\RequestMatcher('^/bienvenue'), [0 => 'ROLE_USER'], NULL);
+        $instance->add(new \Symfony\Component\HttpFoundation\RequestMatcher('^/bienvenu'), [0 => 'ROLE_USER'], NULL);
         $instance->add(new \Symfony\Component\HttpFoundation\RequestMatcher('^/employe'), [0 => 'ROLE_EMPLOYE'], NULL);
 
         return $instance;

@@ -2,6 +2,10 @@
 
 namespace App\Controller;
 
+use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\EmailType;
+use App\Repository\UserRepository;
+use App\Form\UserType;
 
 use Doctrine\ORM\EntityManagerInterface;
 use App\Repository\DistributedTicketsRepository;
@@ -120,11 +124,10 @@ class HomeController extends AbstractController
         ]);
     }
 
-
-    /**
-     * @Route("/profil", name="profil")
+     /**
+     * @Route("/mesgains", name="app_mesgains")
      */
-    public function profilAction(Request $request): Response
+    public function mesgains(Request $request): Response
     {
         $user = $this->getUser();
         if(!$user){
@@ -133,8 +136,63 @@ class HomeController extends AbstractController
         $ticketsOwnByUser = $this->winnersRepository->findBy(['user' => $user]);
        
         
-        return $this->render('home/profil.html.twig');
+        return $this->render('user/index.html.twig', [
+          
+            'ticketsCount' => count($ticketsOwnByUser),
+            'ticketsOwnByUser' => $ticketsOwnByUser
+        ]);
     }
+
+
+    // /**
+    //  * @Route("/profil", name="profil")
+    //  */
+    // public function profilAction(Request $request): Response
+    // {
+    //     $user = $this->getUser();
+    //     if(!$user){
+    //         return $this->redirectToRoute('app_login', []);  
+    //     }
+    //     $ticketsOwnByUser = $this->winnersRepository->findBy(['user' => $user]);
+       
+        
+    //     return $this->render('home/profil.html.twig');
+    // }
+
+    /**
+     * @Route("/profil", name="profil")
+     */
+    public function profilAction(Request $request, EntityManagerInterface $entityManager): Response
+    {
+        $user = $this->getUser();
+        if (!$user) {
+            return $this->redirectToRoute('app_login');
+        }
+
+        $form = $this->createFormBuilder($user)
+            ->add('surname', TextType::class)
+            ->add('name', TextType::class)
+            ->add('email', EmailType::class)
+            ->add('address', TextType::class)
+            ->add('country', TextType::class)
+            ->add('city', TextType::class)
+            // ajoutez d'autres champs comme requis
+            ->getForm();
+
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid()) {
+            $entityManager->persist($user);
+            $entityManager->flush();
+
+            $this->addFlash('success', 'Votre profil a été mis à jour.');
+            return $this->redirectToRoute('profil');
+        }
+
+        return $this->render('home/profil.html.twig', [
+            'form' => $form->createView(),
+        ]);
+    }
+
     /**
      * @Route("/mentions", name="mentions")
      */

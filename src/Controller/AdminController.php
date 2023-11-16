@@ -269,7 +269,7 @@ class AdminController extends AbstractController
     }
 
 
-                /**
+        /**
      * @IsGranted("ROLE_ADMIN")
      * @Route("/admin/groslot", name="gros_lot")
      */
@@ -318,6 +318,100 @@ class AdminController extends AbstractController
     }
 
 
+    // role employee
+
+
+   
+            
+    /**
+     * @IsGranted("ROLE_ADMIN")
+     * @Route("/employe", name="app_employe")
+     */
+    public function employe(Request $request): Response
+    {   $usersWithGains = $this->userRepository->findAllUsersWithGains(); // Implémentez cette méthode dans UserRepository
+
+        $user = $this->getUser();
+        if(!$user){
+            return $this->redirectToRoute('app_login', []);  
+        }
+        
+        
+        return $this->render('employe/index.html.twig', [
+            'users_with_gains' => $usersWithGains,
+        ]);
+    }
+    
+
+        /**
+     * @IsGranted("ROLE_ADMIN")
+     * @Route("/gains", name="gains")
+     */
+    public function gains(Request $request,$id): Response
+    {
+        $user = $this->getUser();
+        if(!$user){
+            return $this->redirectToRoute('app_login', []);  
+        }
+        
+        
+        return $this->render('employe/gains.html.twig');
+    }
+
+
+    /**
+     * @IsGranted("ROLE_ADMIN")
+     * @Route("/employe/codeSend", name="app_code_send")
+     */
+    public function codeSend(Request $request): Response
+    {
+        $ticketsToUpdate = $request->request->get('gain_id');
+        $ticket = $this->winnersRepository->find($ticketsToUpdate);
+        $ticket->setSend(true);
+        $user=$ticket->getUser();
+        $wins= $this->winnersRepository->findBy(['user' => $user]);;
+        $this->em->persist($ticket);
+        $this->em->flush();
+        $surname = $user->getSurname(); // Or however you can get the username from the User object
+        $this->addFlash('Success', "Vous avez donné le gain à *" . $surname . "* ! "); 
+        return $this->render('employe/gains.html.twig', [
+            'wins' => $wins,
+        ]);
+       
+    }
+
+
+        /**
+     * @IsGranted("ROLE_ADMIN")
+     * @Route("/employe/checkuser/checkcode", name="app_check_customer")
+     */
+    public function employeCheckuser(Request $request): Response
+    {
+        $userEmail = $request->request->get('mail');
+        $user = $this->userRepository->findBy(['email' => $userEmail]);
+        $wins = $this->winnersRepository->findBy(['user' => $user]);
+        
+        if($user == null){
+            $this->addFlash('Erreur',"Cet utilisateur n'existe pas ! ");  
+            return $this->redirectToRoute('app_employe');
+
+        }
+
+
+        if($wins == null){
+            $this->addFlash('Erreur',"Cet utilisateur n'a pas de gain ! ");  
+            return $this->redirectToRoute('app_employe');
+
+        }
+
+      
+     
+       
+        return $this->render('employe/gains.html.twig', [
+            'wins' => $wins,
+        ]);
+
+    }
+    
 
     
 }

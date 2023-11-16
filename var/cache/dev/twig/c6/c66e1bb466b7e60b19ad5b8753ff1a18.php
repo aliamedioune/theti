@@ -253,51 +253,89 @@ class __TwigTemplate_debedbba12b08d607273831f61aecc30 extends Template
               <hr>
                <center>  <p style=\"font-size:20px\">Si vous avez un ticket de caisse ou une facture entre le <b>";
         // line 175
-        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_date_modify_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["date"]) || array_key_exists("date", $context) ? $context["date"] : (function () { throw new RuntimeError('Variable "date" does not exist.', 175, $this->source); })()), "closingDate", [], "any", false, false, false, 175), "-30 day"), "d-m-Y"), "html", null, true);
+        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_date_modify_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["date"]) || array_key_exists("date", $context) ? $context["date"] : (function () { throw new RuntimeError('Variable "date" does not exist.', 175, $this->source); })()), "closingDate", [], "any", false, false, false, 175), "-30 day"), "d/m/Y"), "html", null, true);
         echo " </b> et le <b>";
-        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["date"]) || array_key_exists("date", $context) ? $context["date"] : (function () { throw new RuntimeError('Variable "date" does not exist.', 175, $this->source); })()), "closingDate", [], "any", false, false, false, 175), "d-m-Y"), "html", null, true);
+        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["date"]) || array_key_exists("date", $context) ? $context["date"] : (function () { throw new RuntimeError('Variable "date" does not exist.', 175, $this->source); })()), "closingDate", [], "any", false, false, false, 175), "d/m/Y"), "html", null, true);
         echo " </b> et supérieure à 49 € vous êtes éligible à  participer à ce jeu de concours.</p></center> 
               <center>  <p style=\"font-size:20px\">Le grand tirage au sort aura lieu le <b>";
         // line 176
-        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["date"]) || array_key_exists("date", $context) ? $context["date"] : (function () { throw new RuntimeError('Variable "date" does not exist.', 176, $this->source); })()), "closingDate", [], "any", false, false, false, 176), "d-m-Y"), "html", null, true);
+        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["date"]) || array_key_exists("date", $context) ? $context["date"] : (function () { throw new RuntimeError('Variable "date" does not exist.', 176, $this->source); })()), "closingDate", [], "any", false, false, false, 176), "d/m/Y"), "html", null, true);
         echo " </b>pour détermier un gagnant parmi les participants d'un an de thé d'une valeur de 360 €.</b> .</p></center> 
 <hr>
-                <b><p style=\"font-size:18px\">- 1 500 000 Cadeaux à gagner :</p></b>
-                 <ul style=\"font-size:16px\">
-                 <li>60% des tickets offrent un infuseur à thé</li>
+                <b><p style=\"font-size:18px\">- Cadeaux à gagner :</p></b>
+                 <ul style=\"font-size:16px\">     
+                    <div class=\"text-center mt-4\" style=\"display: inline-block; margin-right: 20px;\">
+                        <img src=\"";
+        // line 181
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("uploads/images/Infuseur.jpg"), "html", null, true);
+        echo "\" alt=\"Infuseur à thé\" style=\"max-width: 100%; height: auto;\">
+                        <p>  l'infuseur à thé.</p>
+                    </div>
+                    <div class=\"text-center mt-4\" style=\"display: inline-block; margin-right: 20px;\">
+                        <img src=\"";
+        // line 185
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("uploads/images/ThéDetox.jpg"), "html", null, true);
+        echo "\" alt=\"Thé Detox\" style=\"max-width: 100%; height: auto;\">
+                        <p>  la boite de thé detox.</p>
+                    </div>
+                    <div class=\"text-center mt-4\" style=\"display: inline-block; margin-right: 20px;\">
+                        <img src=\"";
+        // line 189
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("uploads/images/ThéSignature.jpg"), "html", null, true);
+        echo "\" alt=\"Thé Signature\" style=\"max-width: 100%; height: auto;\">
+                        <p>  la boite de thé signature.</p>
+                    </div>
+                    <div class=\"text-center mt-4\" style=\"display: inline-block; margin-right: 20px;\">
+                        <img src=\"";
+        // line 193
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("uploads/images/CoffretDécouverte1.jpg"), "html", null, true);
+        echo "\" alt=\"Coffret Découverte 39€\" style=\"max-width: 100%; height: auto;\">
+                        <p> coffret découverte 39€.</p>
+                    </div>
+                    <div class=\"text-center mt-4\" style=\"display: inline-block;\">
+                        <img src=\"";
+        // line 197
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("uploads/images/CoffretDécouverte2.jpg"), "html", null, true);
+        echo "\" alt=\"Coffret Découverte 69€\" style=\"max-width: 100%; height: auto;\">
+                        <p> coffret découverte 69€.</p>
+                    </div>
+                    ";
+        // line 203
+        echo "                 <li>60% des tickets offrent un infuseur à thé</li>
                  <li>20% des tickets offrent une boite de 100g d’un thé detox ou infusion</li>
                  <li>10% des tickets offrent une boite de 100g de thé signature</li>
                  <li>6% des tickets offrent un coffret découverte d’une valeur de 39 €</li>
                  <li>4% des tickets offrent un coffret découverte d’une valeur de 69 €</li>
                  </ul>
+                
                     
                 <div class=\"card-group\">
                     <div class=\"p-4 card\">
                         <div class=\"card-body\">
                             <form method=\"post\">
                                 ";
-        // line 191
-        if ((isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 191, $this->source); })())) {
-            // line 192
+        // line 215
+        if ((isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 215, $this->source); })())) {
+            // line 216
             echo "                                    <div class=\"alert alert-danger\">";
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans(twig_get_attribute($this->env, $this->source, (isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 192, $this->source); })()), "messageKey", [], "any", false, false, false, 192), twig_get_attribute($this->env, $this->source, (isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 192, $this->source); })()), "messageData", [], "any", false, false, false, 192), "security"), "html", null, true);
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans(twig_get_attribute($this->env, $this->source, (isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 216, $this->source); })()), "messageKey", [], "any", false, false, false, 216), twig_get_attribute($this->env, $this->source, (isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 216, $this->source); })()), "messageData", [], "any", false, false, false, 216), "security"), "html", null, true);
             echo "</div>
                                 ";
         }
-        // line 194
+        // line 218
         echo "                                <h1>Connexion</h1>
                                 
                                 <div class=\"mb-3 input-group\">
                                     <input type=\"email\" value=\"";
-        // line 197
-        echo twig_escape_filter($this->env, (isset($context["last_username"]) || array_key_exists("last_username", $context) ? $context["last_username"] : (function () { throw new RuntimeError('Variable "last_username" does not exist.', 197, $this->source); })()), "html", null, true);
+        // line 221
+        echo twig_escape_filter($this->env, (isset($context["last_username"]) || array_key_exists("last_username", $context) ? $context["last_username"] : (function () { throw new RuntimeError('Variable "last_username" does not exist.', 221, $this->source); })()), "html", null, true);
         echo "\" name=\"email\" id=\"inputEmail\" class=\"form-control\" placeholder=\"email\" autocomplete=\"email\" required autofocus>
                                 </div>
                                 <div class=\"mb-2 input-group\">
                                     <input type=\"password\" name=\"password\" id=\"inputPassword\" class=\"form-control\" placeholder=\"mot de passe\" autocomplete=\"current-password\" required>
                                 </div>
                                 <input type=\"hidden\" name=\"_csrf_token\" value=\"";
-        // line 202
+        // line 226
         echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken("authenticate"), "html", null, true);
         echo "\">
                                 <div class=\"row mt-3\">
@@ -324,6 +362,7 @@ class __TwigTemplate_debedbba12b08d607273831f61aecc30 extends Template
     </div>
 </div>
 </div>
+
 
 <script>
 
@@ -352,7 +391,7 @@ class __TwigTemplate_debedbba12b08d607273831f61aecc30 extends Template
 
     public function getDebugInfo()
     {
-        return array (  301 => 202,  293 => 197,  288 => 194,  282 => 192,  280 => 191,  262 => 176,  256 => 175,  244 => 165,  147 => 51,  111 => 9,  101 => 8,  89 => 5,  79 => 4,  60 => 3,  37 => 1,);
+        return array (  339 => 226,  331 => 221,  326 => 218,  320 => 216,  318 => 215,  304 => 203,  298 => 197,  291 => 193,  284 => 189,  277 => 185,  270 => 181,  262 => 176,  256 => 175,  244 => 165,  147 => 51,  111 => 9,  101 => 8,  89 => 5,  79 => 4,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -531,17 +570,41 @@ class __TwigTemplate_debedbba12b08d607273831f61aecc30 extends Template
             <div class=\"card border-primary mb-3\" style=\"background-color: rgba(245, 245, 245, 0.9)\">
               <center>  <h1 style=\"font-size:35px\"> Bienvenue sur Thé TipTop le jeu-concours! Inscrivez-vous et entrez votre numéro de caisse.</h1>  </center>
               <hr>
-               <center>  <p style=\"font-size:20px\">Si vous avez un ticket de caisse ou une facture entre le <b>{{ date.closingDate|date_modify(\"-30 day\")|date('d-m-Y') }} </b> et le <b>{{ date.closingDate|date('d-m-Y') }} </b> et supérieure à 49 € vous êtes éligible à  participer à ce jeu de concours.</p></center> 
-              <center>  <p style=\"font-size:20px\">Le grand tirage au sort aura lieu le <b>{{ date.closingDate|date('d-m-Y') }} </b>pour détermier un gagnant parmi les participants d'un an de thé d'une valeur de 360 €.</b> .</p></center> 
+               <center>  <p style=\"font-size:20px\">Si vous avez un ticket de caisse ou une facture entre le <b>{{ date.closingDate|date_modify(\"-30 day\")|date('d/m/Y') }} </b> et le <b>{{ date.closingDate|date('d/m/Y') }} </b> et supérieure à 49 € vous êtes éligible à  participer à ce jeu de concours.</p></center> 
+              <center>  <p style=\"font-size:20px\">Le grand tirage au sort aura lieu le <b>{{ date.closingDate|date('d/m/Y') }} </b>pour détermier un gagnant parmi les participants d'un an de thé d'une valeur de 360 €.</b> .</p></center> 
 <hr>
-                <b><p style=\"font-size:18px\">- 1 500 000 Cadeaux à gagner :</p></b>
-                 <ul style=\"font-size:16px\">
+                <b><p style=\"font-size:18px\">- Cadeaux à gagner :</p></b>
+                 <ul style=\"font-size:16px\">     
+                    <div class=\"text-center mt-4\" style=\"display: inline-block; margin-right: 20px;\">
+                        <img src=\"{{ asset('uploads/images/Infuseur.jpg') }}\" alt=\"Infuseur à thé\" style=\"max-width: 100%; height: auto;\">
+                        <p>  l'infuseur à thé.</p>
+                    </div>
+                    <div class=\"text-center mt-4\" style=\"display: inline-block; margin-right: 20px;\">
+                        <img src=\"{{ asset('uploads/images/ThéDetox.jpg') }}\" alt=\"Thé Detox\" style=\"max-width: 100%; height: auto;\">
+                        <p>  la boite de thé detox.</p>
+                    </div>
+                    <div class=\"text-center mt-4\" style=\"display: inline-block; margin-right: 20px;\">
+                        <img src=\"{{ asset('uploads/images/ThéSignature.jpg') }}\" alt=\"Thé Signature\" style=\"max-width: 100%; height: auto;\">
+                        <p>  la boite de thé signature.</p>
+                    </div>
+                    <div class=\"text-center mt-4\" style=\"display: inline-block; margin-right: 20px;\">
+                        <img src=\"{{ asset('uploads/images/CoffretDécouverte1.jpg') }}\" alt=\"Coffret Découverte 39€\" style=\"max-width: 100%; height: auto;\">
+                        <p> coffret découverte 39€.</p>
+                    </div>
+                    <div class=\"text-center mt-4\" style=\"display: inline-block;\">
+                        <img src=\"{{ asset('uploads/images/CoffretDécouverte2.jpg') }}\" alt=\"Coffret Découverte 69€\" style=\"max-width: 100%; height: auto;\">
+                        <p> coffret découverte 69€.</p>
+                    </div>
+                    {# <div class=\"text-center mt-4\">
+                        <img src=\"{{ asset('uploads/images/combined_tea.png') }}\" alt=\"Prizes Image\" style=\"max-width: 100%; height: auto;\">
+                    </div> #}
                  <li>60% des tickets offrent un infuseur à thé</li>
                  <li>20% des tickets offrent une boite de 100g d’un thé detox ou infusion</li>
                  <li>10% des tickets offrent une boite de 100g de thé signature</li>
                  <li>6% des tickets offrent un coffret découverte d’une valeur de 39 €</li>
                  <li>4% des tickets offrent un coffret découverte d’une valeur de 69 €</li>
                  </ul>
+                
                     
                 <div class=\"card-group\">
                     <div class=\"p-4 card\">
@@ -583,6 +646,7 @@ class __TwigTemplate_debedbba12b08d607273831f61aecc30 extends Template
     </div>
 </div>
 </div>
+
 
 <script>
 

@@ -1,4 +1,4 @@
-{% extends 'base.html.twig' %}
+{# {% extends 'base.html.twig' %}
 
 {% block title %}Thé Tiotop{% endblock %}
 
@@ -56,13 +56,6 @@
 {% endfor %}
 
 
-
-{# {% for message in app.session.flashbag.get('Erreur') %}
-<div class="alert alert-dismissible alert-danger">
-  <h4 class="alert-heading"> {{ message }}</h4>
-</div>
-<br>
-{% endfor %}  #}
 <style>
   body {
     font-family: 'Arial', sans-serif;
@@ -97,14 +90,6 @@
     background-color: #5a6268;
   }
 
-  {# .container {
-    max-width: 800px;
-    margin: 20px auto;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-  } #}
 
   .header {
     background-color: #4CAF50;
@@ -231,8 +216,161 @@
 <br> <br>  <br>  <br> <br> 
 <br> 
 
-       
-   
+      
 
+{% endblock %} #}
+{% extends 'baseEmploye.html.twig' %}
+
+{% block title %}Gestion des Gains{% endblock %}
+
+{% block stylesheets %}
+{{ parent() }}
+<style>
+    body {
+        background-color: #f8f9fa; /* A light grey background */
+    }
+    .container {
+        background-color: #fff; /* White background for the content */
+        border-radius: 0.25rem;
+        box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); /* Subtle shadow for depth */
+        padding: 2rem;
+        margin-top: 2rem;
+    }
+    .card {
+        background-color: #007bff; /* Bootstrap primary color */
+        border-color: #007bff; /* Consistent with the background */
+    }
+    .card h2 {
+        color: #fff; /* White text for readability */
+    }
+    .card input, .card button {
+        margin-top: 0.5rem;
+    }
+    .table {
+        margin-top: 2rem;
+    }
+    thead {
+        background-color: #0062cc; /* A darker shade of primary color */
+        color: #fff;
+    }
+    .btn-custom {
+        background-color: #28a745; /* Bootstrap success color */
+        color: white;
+        border: none;
+        border-radius: 0.25rem;
+        padding: 10px 50px; /* Increased padding */
+        font-size: 50px; /* Larger font size */
+        transition: background-color 1s ease-in-out;
+    }
+    .btn-custom:hover, .btn-custom:focus {
+        background-color: #218838; /* A darker shade for hover/focus */
+        color: #fff;
+        text-decoration: none;
+    }
+    /* Ensure that the buttons are not being overridden by other styles */
+    button.btn-custom {
+        background-color: #28a745 !important; /* Use !important as a last resort */
+    }
+    .badge {
+        font-size: 100%;
+    }
+</style>
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <div class="card">
+        <div class="card-body">
+            <h2 class="text-center">Indiquez l'email du client pour voir ses gains :</h2>
+            <form method="POST" action="/employe/checkuser/checkcode" class="form-inline justify-content-center">
+                <input name="mail" type="email" placeholder="Email" class="form-control mr-2">
+                <span class="badge badge-success"><button type="submit" class="btn btn-custom">Valider</button></span>
+            </form>
+        </div>
+    </div>
+
+    <h2 class="text-center my-4">Liste des utilisateurs avec gains</h2>
+
+    {% for message in app.flashes('success') %}
+    <div class="alert alert-success text-center">{{ message }}</div>
+    {% endfor %}
+
+    {% for message in app.flashes('error') %}
+    <div class="alert alert-danger text-center">{{ message }}</div>
+    {% endfor %}
+
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Utilisateur</th>
+                    <th>Email</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for user in users_with_gains %}
+            <tr>
+                <td>{{ user.name }}</td>
+                <td>{{ user.email }}</td>
+                <td>
+                 
+                  <span class="badge badge-info">  <button onclick="toggleGains('gains-{{ user.id }}')" class="btn btn-custom">Voir les gains</button></span>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <div class="collapse" id="gains-{{ user.id }}">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Type de gain</th>
+                                    <th>État de gain</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            {% for win in user.winningTickets %}
+                                <tr>
+                                    <td>{{ win.ticket.title }}</td>
+                                    <td>
+                                        {% if not win.send %}
+                                            <span class="badge badge-warning">Pas encore distribué</span>
+                                        {% else %}
+                                            <span class="badge badge-success">Déjà distribué</span>
+                                        {% endif %}
+                                    </td>
+                                    <td>
+                                        {% if not win.send %}
+                                            <form method="post" action="{{ path('app_code_send') }}">
+                                                <input type="hidden" name="gain_id" value="{{ win.id }}">
+                                                <span class="badge badge-success"><button type="submit" class="btn btn-custom">Donner le gain</button></span>
+                                                
+                                            </form>
+                                        {% endif %}
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script>
+    function toggleGains(id) {
+        var element = document.getElementById(id);
+        if (element.style.display === "none") {
+            element.style.display = "block";
+        } else {
+            element.style.display = "none";
+        }
+    }
+</script>
 
 {% endblock %}

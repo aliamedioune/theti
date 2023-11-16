@@ -80,6 +80,14 @@ return [[
 '[C]App%5CController%5CAdminController%23groslotAction' => 1,
 'App%5CController%5CAdminController%23dowloadletter' => 12,
 '[C]App%5CController%5CAdminController%23dowloadletter' => 1,
+'App%5CController%5CAdminController%23employe' => 13,
+'[C]App%5CController%5CAdminController%23employe' => 1,
+'App%5CController%5CAdminController%23gains' => 14,
+'[C]App%5CController%5CAdminController%23gains' => 1,
+'App%5CController%5CAdminController%23codeSend' => 15,
+'[C]App%5CController%5CAdminController%23codeSend' => 1,
+'App%5CController%5CAdminController%23employeCheckuser' => 16,
+'[C]App%5CController%5CAdminController%23employeCheckuser' => 1,
 'App%5CController%5CAdminController%24em' => 0,
 '[C]App%5CController%5CAdminController%24em' => 1,
 'App%5CController%5CAdminController%24distributedTicketsRepository' => 0,
@@ -96,13 +104,13 @@ return [[
 '[C]App%5CController%5CEmployeController' => 1,
 'App%5CController%5CEmployeController%23__construct' => 0,
 '[C]App%5CController%5CEmployeController%23__construct' => 1,
-'App%5CController%5CEmployeController%23employe' => 13,
+'App%5CController%5CEmployeController%23employe' => 17,
 '[C]App%5CController%5CEmployeController%23employe' => 1,
-'App%5CController%5CEmployeController%23gains' => 14,
+'App%5CController%5CEmployeController%23gains' => 18,
 '[C]App%5CController%5CEmployeController%23gains' => 1,
-'App%5CController%5CEmployeController%23codeSend' => 15,
+'App%5CController%5CEmployeController%23codeSend' => 19,
 '[C]App%5CController%5CEmployeController%23codeSend' => 1,
-'App%5CController%5CEmployeController%23employeCheckuser' => 16,
+'App%5CController%5CEmployeController%23employeCheckuser' => 20,
 '[C]App%5CController%5CEmployeController%23employeCheckuser' => 1,
 'App%5CController%5CEmployeController%24em' => 0,
 '[C]App%5CController%5CEmployeController%24em' => 1,
@@ -114,25 +122,29 @@ return [[
 '[C]App%5CController%5CHomeController' => 1,
 'App%5CController%5CHomeController%23__construct' => 0,
 '[C]App%5CController%5CHomeController%23__construct' => 1,
-'App%5CController%5CHomeController%23index' => 17,
+'App%5CController%5CHomeController%23index' => 21,
 '[C]App%5CController%5CHomeController%23index' => 1,
-'App%5CController%5CHomeController%23about' => 18,
+'App%5CController%5CHomeController%23about' => 22,
 '[C]App%5CController%5CHomeController%23about' => 1,
-'App%5CController%5CHomeController%23The' => 19,
+'App%5CController%5CHomeController%23The' => 23,
 '[C]App%5CController%5CHomeController%23The' => 1,
-'App%5CController%5CHomeController%23Produuit' => 20,
+'App%5CController%5CHomeController%23Produuit' => 24,
 '[C]App%5CController%5CHomeController%23Produuit' => 1,
-'App%5CController%5CHomeController%23faq' => 21,
+'App%5CController%5CHomeController%23faq' => 25,
 '[C]App%5CController%5CHomeController%23faq' => 1,
+'App%5CController%5CHomeController%23termsAndCondition' => 26,
+'[C]App%5CController%5CHomeController%23termsAndCondition' => 1,
 'App%5CController%5CHomeController%23index1' => 0,
 '[C]App%5CController%5CHomeController%23index1' => 1,
-'App%5CController%5CHomeController%23bienvenu' => 22,
+'App%5CController%5CHomeController%23bienvenu' => 27,
 '[C]App%5CController%5CHomeController%23bienvenu' => 1,
-'App%5CController%5CHomeController%23profilAction' => 23,
+'App%5CController%5CHomeController%23mesgains' => 28,
+'[C]App%5CController%5CHomeController%23mesgains' => 1,
+'App%5CController%5CHomeController%23profilAction' => 29,
 '[C]App%5CController%5CHomeController%23profilAction' => 1,
-'App%5CController%5CHomeController%23montionAction' => 24,
+'App%5CController%5CHomeController%23montionAction' => 30,
 '[C]App%5CController%5CHomeController%23montionAction' => 1,
-'App%5CController%5CHomeController%23codecadeauCheck' => 25,
+'App%5CController%5CHomeController%23codecadeauCheck' => 31,
 '[C]App%5CController%5CHomeController%23codecadeauCheck' => 1,
 'App%5CController%5CHomeController%23pickWeightedRandomValue' => 0,
 '[C]App%5CController%5CHomeController%23pickWeightedRandomValue' => 1,
@@ -154,7 +166,7 @@ return [[
 '[C]App%5CController%5CRegistrationController%23register' => 1,
 'App%5CController%5CRobotsController' => 0,
 '[C]App%5CController%5CRobotsController' => 1,
-'App%5CController%5CRobotsController%23robotsTxt' => 26,
+'App%5CController%5CRobotsController%23robotsTxt' => 32,
 '[C]App%5CController%5CRobotsController%23robotsTxt' => 1,
 'App%5CController%5CSecurityController' => 0,
 '[C]App%5CController%5CSecurityController' => 1,
@@ -866,7 +878,7 @@ return [[
 ], [
 
 0 => [],
-1 => 1699917829,
+1 => 1700135713,
 2 => static function () {
     return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
         $o = [
@@ -1501,7 +1513,7 @@ return [[
         [
             'Sensio\\Bundle\\FrameworkExtraBundle\\Configuration\\IsGranted' => [
                 'attributes' => [
-                    'ROLE_EMPLOYE',
+                    'ROLE_ADMIN',
                 ],
             ],
             'Symfony\\Component\\Routing\\Annotation\\Route' => [
@@ -1557,7 +1569,7 @@ return [[
         [
             'Sensio\\Bundle\\FrameworkExtraBundle\\Configuration\\IsGranted' => [
                 'attributes' => [
-                    'ROLE_EMPLOYE',
+                    'ROLE_ADMIN',
                 ],
             ],
             'Symfony\\Component\\Routing\\Annotation\\Route' => [
@@ -1613,7 +1625,7 @@ return [[
         [
             'Sensio\\Bundle\\FrameworkExtraBundle\\Configuration\\IsGranted' => [
                 'attributes' => [
-                    'ROLE_EMPLOYE',
+                    'ROLE_ADMIN',
                 ],
             ],
             'Symfony\\Component\\Routing\\Annotation\\Route' => [
@@ -1669,7 +1681,7 @@ return [[
         [
             'Sensio\\Bundle\\FrameworkExtraBundle\\Configuration\\IsGranted' => [
                 'attributes' => [
-                    'ROLE_EMPLOYE',
+                    'ROLE_ADMIN',
                 ],
             ],
             'Symfony\\Component\\Routing\\Annotation\\Route' => [
@@ -1718,6 +1730,230 @@ return [[
 17 => static function () {
     return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
         $o = [
+            clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Sensio\\Bundle\\FrameworkExtraBundle\\Configuration\\IsGranted'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Sensio\\Bundle\\FrameworkExtraBundle\\Configuration\\IsGranted')),
+            clone ($p['Symfony\\Component\\Routing\\Annotation\\Route'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Routing\\Annotation\\Route')),
+        ],
+        null,
+        [
+            'Sensio\\Bundle\\FrameworkExtraBundle\\Configuration\\IsGranted' => [
+                'attributes' => [
+                    'ROLE_EMPLOYE',
+                ],
+            ],
+            'Symfony\\Component\\Routing\\Annotation\\Route' => [
+                'path' => [
+                    1 => '/employe',
+                ],
+                'methods' => [
+                    1 => [],
+                ],
+                'schemes' => [
+                    1 => [],
+                ],
+                'name' => [
+                    1 => 'app_employe',
+                ],
+                'requirements' => [
+                    1 => [],
+                ],
+                'options' => [
+                    1 => [],
+                ],
+                'defaults' => [
+                    1 => [],
+                ],
+                'host' => [
+                    1 => null,
+                ],
+                'condition' => [
+                    1 => null,
+                ],
+                'priority' => [
+                    1 => null,
+                ],
+                'env' => [
+                    1 => null,
+                ],
+            ],
+        ],
+        [
+            $o[0],
+            $o[1],
+        ],
+        []
+    );
+},
+18 => static function () {
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Sensio\\Bundle\\FrameworkExtraBundle\\Configuration\\IsGranted'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Sensio\\Bundle\\FrameworkExtraBundle\\Configuration\\IsGranted')),
+            clone ($p['Symfony\\Component\\Routing\\Annotation\\Route'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Routing\\Annotation\\Route')),
+        ],
+        null,
+        [
+            'Sensio\\Bundle\\FrameworkExtraBundle\\Configuration\\IsGranted' => [
+                'attributes' => [
+                    'ROLE_EMPLOYE',
+                ],
+            ],
+            'Symfony\\Component\\Routing\\Annotation\\Route' => [
+                'path' => [
+                    1 => '/gains',
+                ],
+                'methods' => [
+                    1 => [],
+                ],
+                'schemes' => [
+                    1 => [],
+                ],
+                'name' => [
+                    1 => 'gains',
+                ],
+                'requirements' => [
+                    1 => [],
+                ],
+                'options' => [
+                    1 => [],
+                ],
+                'defaults' => [
+                    1 => [],
+                ],
+                'host' => [
+                    1 => null,
+                ],
+                'condition' => [
+                    1 => null,
+                ],
+                'priority' => [
+                    1 => null,
+                ],
+                'env' => [
+                    1 => null,
+                ],
+            ],
+        ],
+        [
+            $o[0],
+            $o[1],
+        ],
+        []
+    );
+},
+19 => static function () {
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Sensio\\Bundle\\FrameworkExtraBundle\\Configuration\\IsGranted'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Sensio\\Bundle\\FrameworkExtraBundle\\Configuration\\IsGranted')),
+            clone ($p['Symfony\\Component\\Routing\\Annotation\\Route'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Routing\\Annotation\\Route')),
+        ],
+        null,
+        [
+            'Sensio\\Bundle\\FrameworkExtraBundle\\Configuration\\IsGranted' => [
+                'attributes' => [
+                    'ROLE_EMPLOYE',
+                ],
+            ],
+            'Symfony\\Component\\Routing\\Annotation\\Route' => [
+                'path' => [
+                    1 => '/employe/codeSend',
+                ],
+                'methods' => [
+                    1 => [],
+                ],
+                'schemes' => [
+                    1 => [],
+                ],
+                'name' => [
+                    1 => 'app_code_send',
+                ],
+                'requirements' => [
+                    1 => [],
+                ],
+                'options' => [
+                    1 => [],
+                ],
+                'defaults' => [
+                    1 => [],
+                ],
+                'host' => [
+                    1 => null,
+                ],
+                'condition' => [
+                    1 => null,
+                ],
+                'priority' => [
+                    1 => null,
+                ],
+                'env' => [
+                    1 => null,
+                ],
+            ],
+        ],
+        [
+            $o[0],
+            $o[1],
+        ],
+        []
+    );
+},
+20 => static function () {
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Sensio\\Bundle\\FrameworkExtraBundle\\Configuration\\IsGranted'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Sensio\\Bundle\\FrameworkExtraBundle\\Configuration\\IsGranted')),
+            clone ($p['Symfony\\Component\\Routing\\Annotation\\Route'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Routing\\Annotation\\Route')),
+        ],
+        null,
+        [
+            'Sensio\\Bundle\\FrameworkExtraBundle\\Configuration\\IsGranted' => [
+                'attributes' => [
+                    'ROLE_EMPLOYE',
+                ],
+            ],
+            'Symfony\\Component\\Routing\\Annotation\\Route' => [
+                'path' => [
+                    1 => '/employe/checkuser/checkcode',
+                ],
+                'methods' => [
+                    1 => [],
+                ],
+                'schemes' => [
+                    1 => [],
+                ],
+                'name' => [
+                    1 => 'app_check_customer',
+                ],
+                'requirements' => [
+                    1 => [],
+                ],
+                'options' => [
+                    1 => [],
+                ],
+                'defaults' => [
+                    1 => [],
+                ],
+                'host' => [
+                    1 => null,
+                ],
+                'condition' => [
+                    1 => null,
+                ],
+                'priority' => [
+                    1 => null,
+                ],
+                'env' => [
+                    1 => null,
+                ],
+            ],
+        ],
+        [
+            $o[0],
+            $o[1],
+        ],
+        []
+    );
+},
+21 => static function () {
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
             clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Symfony\\Component\\Routing\\Annotation\\Route'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Routing\\Annotation\\Route')),
         ],
         null,
@@ -1764,7 +2000,7 @@ return [[
         []
     );
 },
-18 => static function () {
+22 => static function () {
     return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
         $o = [
             clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Symfony\\Component\\Routing\\Annotation\\Route'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Routing\\Annotation\\Route')),
@@ -1813,7 +2049,7 @@ return [[
         []
     );
 },
-19 => static function () {
+23 => static function () {
     return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
         $o = [
             clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Symfony\\Component\\Routing\\Annotation\\Route'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Routing\\Annotation\\Route')),
@@ -1862,7 +2098,7 @@ return [[
         []
     );
 },
-20 => static function () {
+24 => static function () {
     return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
         $o = [
             clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Symfony\\Component\\Routing\\Annotation\\Route'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Routing\\Annotation\\Route')),
@@ -1911,7 +2147,7 @@ return [[
         []
     );
 },
-21 => static function () {
+25 => static function () {
     return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
         $o = [
             clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Symfony\\Component\\Routing\\Annotation\\Route'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Routing\\Annotation\\Route')),
@@ -1960,7 +2196,56 @@ return [[
         []
     );
 },
-22 => static function () {
+26 => static function () {
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Symfony\\Component\\Routing\\Annotation\\Route'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Routing\\Annotation\\Route')),
+        ],
+        null,
+        [
+            'Symfony\\Component\\Routing\\Annotation\\Route' => [
+                'path' => [
+                    '/terms-and-conditions',
+                ],
+                'methods' => [
+                    [],
+                ],
+                'schemes' => [
+                    [],
+                ],
+                'name' => [
+                    'terms-and-conditions',
+                ],
+                'requirements' => [
+                    [],
+                ],
+                'options' => [
+                    [],
+                ],
+                'defaults' => [
+                    [],
+                ],
+                'host' => [
+                    null,
+                ],
+                'condition' => [
+                    null,
+                ],
+                'priority' => [
+                    null,
+                ],
+                'env' => [
+                    null,
+                ],
+            ],
+        ],
+        [
+            $o[0],
+        ],
+        []
+    );
+},
+27 => static function () {
     return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
         $o = [
             clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Symfony\\Component\\Routing\\Annotation\\Route'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Routing\\Annotation\\Route')),
@@ -2009,7 +2294,56 @@ return [[
         []
     );
 },
-23 => static function () {
+28 => static function () {
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Symfony\\Component\\Routing\\Annotation\\Route'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Routing\\Annotation\\Route')),
+        ],
+        null,
+        [
+            'Symfony\\Component\\Routing\\Annotation\\Route' => [
+                'path' => [
+                    '/mesgains',
+                ],
+                'methods' => [
+                    [],
+                ],
+                'schemes' => [
+                    [],
+                ],
+                'name' => [
+                    'app_mesgains',
+                ],
+                'requirements' => [
+                    [],
+                ],
+                'options' => [
+                    [],
+                ],
+                'defaults' => [
+                    [],
+                ],
+                'host' => [
+                    null,
+                ],
+                'condition' => [
+                    null,
+                ],
+                'priority' => [
+                    null,
+                ],
+                'env' => [
+                    null,
+                ],
+            ],
+        ],
+        [
+            $o[0],
+        ],
+        []
+    );
+},
+29 => static function () {
     return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
         $o = [
             clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Symfony\\Component\\Routing\\Annotation\\Route'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Routing\\Annotation\\Route')),
@@ -2058,7 +2392,7 @@ return [[
         []
     );
 },
-24 => static function () {
+30 => static function () {
     return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
         $o = [
             clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Symfony\\Component\\Routing\\Annotation\\Route'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Routing\\Annotation\\Route')),
@@ -2107,7 +2441,7 @@ return [[
         []
     );
 },
-25 => static function () {
+31 => static function () {
     return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
         $o = [
             clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Symfony\\Component\\Routing\\Annotation\\Route'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Routing\\Annotation\\Route')),
@@ -2156,7 +2490,7 @@ return [[
         []
     );
 },
-26 => static function () {
+32 => static function () {
     return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
         $o = [
             clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Symfony\\Component\\Routing\\Annotation\\Route'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Routing\\Annotation\\Route')),

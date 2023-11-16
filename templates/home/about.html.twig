@@ -1,9 +1,22 @@
 {% extends 'base.html.twig' %} 
 
 {% block body %}
+<style>
+    .custom-container {
+        background-color: #f9f9f9; /* Fond gris clair */
+        border-radius: 10px; /* Bords arrondis */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre portée légère */
+        padding: 2rem; /* Espacement interne */
+        margin-top: 2rem; /* Marge en haut */
+        margin-bottom: 2rem; /* Marge en bas */
+        border: 1px solid #ddd; /* Bordure subtile */
+    }
+    
+    /* Vous pouvez également ajouter d'autres styles spécifiques ici */
+</style>
     <main id="about">
 		<section>
-			<div class="container padding">
+        <div class="container custom-container">
 				<h1>A propos de nous</h1>
 				<h2>Notre équipe</h2>
 				<h3>Amélie,fondatrice de Cup of Tea</h3>

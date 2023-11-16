@@ -33,7 +33,7 @@ class __TwigTemplate_b539eada17616cdd8b16bdc93a3b7a06 extends Template
     protected function doGetParent(array $context)
     {
         // line 1
-        return "base.html.twig";
+        return "baseEmploye.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = [])
@@ -45,7 +45,7 @@ class __TwigTemplate_b539eada17616cdd8b16bdc93a3b7a06 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "home/profil.html.twig"));
 
-        $this->parent = $this->loadTemplate("base.html.twig", "home/profil.html.twig", 1);
+        $this->parent = $this->loadTemplate("baseEmploye.html.twig", "home/profil.html.twig", 1);
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
         $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
@@ -269,11 +269,70 @@ class __TwigTemplate_b539eada17616cdd8b16bdc93a3b7a06 extends Template
                             </div>
                             
                     </div>
+                      <div class=\"text-center\">
+                        <!-- Bouton qui, quand cliqué, rendra le formulaire de modification visible -->
+                        <button onclick=\"toggleEditForm()\" class=\"btn btn-primary\">Modifier</button>
+                    </div>
+                    <div id=\"editForm\" style=\"display:none;\">
+                            <div class=\"card mt-4\">
+                                <div class=\"card-body\">
+                                    <h2>Modifier Mon Profil</h2>
+                                    ";
+        // line 177
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 177, $this->source); })()), 'form_start');
+        echo "
+                                    ";
+        // line 178
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 178, $this->source); })()), "surname", [], "any", false, false, false, 178), 'row');
+        echo "
+                                    ";
+        // line 179
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 179, $this->source); })()), "name", [], "any", false, false, false, 179), 'row');
+        echo "
+                                    ";
+        // line 180
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 180, $this->source); })()), "email", [], "any", false, false, false, 180), 'row');
+        echo "
+                                    ";
+        // line 181
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 181, $this->source); })()), "address", [], "any", false, false, false, 181), 'row');
+        echo "
+                                    ";
+        // line 182
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 182, $this->source); })()), "country", [], "any", false, false, false, 182), 'row');
+        echo "
+                                    ";
+        // line 183
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 183, $this->source); })()), "city", [], "any", false, false, false, 183), 'row');
+        echo "
+                                    <!-- Ajoutez ici des form_row pour les autres champs -->
+                                    <button type=\"submit\" class=\"btn btn-success\">Sauvegarder les modifications</button>
+                                    ";
+        // line 186
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 186, $this->source); })()), 'form_end');
+        echo "
+                                </div>
+                            </div>
+                    </div>  
                 </div>
             </div>
         </div>
     </div>
 </div><br><br><br><br>
+<script>
+    function toggleEditForm() {
+        var form = document.getElementById('editForm');
+        if (form.style.display === \"none\") {
+            form.style.display = \"block\";
+        } else {
+            form.style.display = \"none\";
+        }
+    }
+</script>
+
+
+
+
 ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -295,12 +354,12 @@ class __TwigTemplate_b539eada17616cdd8b16bdc93a3b7a06 extends Template
 
     public function getDebugInfo()
     {
-        return array (  264 => 162,  246 => 147,  229 => 133,  213 => 120,  197 => 107,  180 => 93,  164 => 80,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  312 => 186,  306 => 183,  302 => 182,  298 => 181,  294 => 180,  290 => 179,  286 => 178,  282 => 177,  264 => 162,  246 => 147,  229 => 133,  213 => 120,  197 => 107,  180 => 93,  164 => 80,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("{% extends 'base.html.twig' %}
+        return new Source("{% extends 'baseEmploye.html.twig' %}
 
 {% block title %}Mon profil{% endblock %}
   
@@ -468,11 +527,46 @@ class __TwigTemplate_b539eada17616cdd8b16bdc93a3b7a06 extends Template
                             </div>
                             
                     </div>
+                      <div class=\"text-center\">
+                        <!-- Bouton qui, quand cliqué, rendra le formulaire de modification visible -->
+                        <button onclick=\"toggleEditForm()\" class=\"btn btn-primary\">Modifier</button>
+                    </div>
+                    <div id=\"editForm\" style=\"display:none;\">
+                            <div class=\"card mt-4\">
+                                <div class=\"card-body\">
+                                    <h2>Modifier Mon Profil</h2>
+                                    {{ form_start(form) }}
+                                    {{ form_row(form.surname) }}
+                                    {{ form_row(form.name) }}
+                                    {{ form_row(form.email) }}
+                                    {{ form_row(form.address) }}
+                                    {{ form_row(form.country) }}
+                                    {{ form_row(form.city) }}
+                                    <!-- Ajoutez ici des form_row pour les autres champs -->
+                                    <button type=\"submit\" class=\"btn btn-success\">Sauvegarder les modifications</button>
+                                    {{ form_end(form) }}
+                                </div>
+                            </div>
+                    </div>  
                 </div>
             </div>
         </div>
     </div>
 </div><br><br><br><br>
+<script>
+    function toggleEditForm() {
+        var form = document.getElementById('editForm');
+        if (form.style.display === \"none\") {
+            form.style.display = \"block\";
+        } else {
+            form.style.display = \"none\";
+        }
+    }
+</script>
+
+
+
+
 {% endblock %}
 ", "home/profil.html.twig", "C:\\Users\\ASUS ROG STRIX\\Desktop\\bac+5\\apprendre\\Nouveau dossier\\Tiptop101123\\Tiptop\\Tiptop\\templates\\home\\profil.html.twig");
     }

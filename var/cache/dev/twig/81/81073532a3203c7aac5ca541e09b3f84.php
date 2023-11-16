@@ -65,14 +65,27 @@ class __TwigTemplate_98fceb906d36027cf2a6b292f9b4781a extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 4
-        echo "    <main id=\"about\">
+        echo "<style>
+    .custom-container {
+        background-color: #f9f9f9; /* Fond gris clair */
+        border-radius: 10px; /* Bords arrondis */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre portée légère */
+        padding: 2rem; /* Espacement interne */
+        margin-top: 2rem; /* Marge en haut */
+        margin-bottom: 2rem; /* Marge en bas */
+        border: 1px solid #ddd; /* Bordure subtile */
+    }
+    
+    /* Vous pouvez également ajouter d'autres styles spécifiques ici */
+</style>
+    <main id=\"about\">
 \t\t<section>
-\t\t\t<div class=\"container padding\">
+        <div class=\"container custom-container\">
 \t\t\t\t<h1>A propos de nous</h1>
 \t\t\t\t<h2>Notre équipe</h2>
 \t\t\t\t<h3>Amélie,fondatrice de Cup of Tea</h3>
 \t\t\t\t<img src=\"";
-        // line 10
+        // line 23
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/img/amelie.jpg"), "html", null, true);
         echo "\" alt=\"amélie\">
 \t\t\t\t<p>Amélie a commencé sa quête de la tasse de thé parfaite dans les hauts plateaux de Darjeeling. Sa passion pour les mélanges aromatiques et son engagement envers le commerce équitable ont donné naissance à Cup of Tea. Aujourd’hui, elle sélectionne personnellement chaque feuille, assurant une expérience inoubliable à chaque gorgée.
@@ -81,7 +94,7 @@ class __TwigTemplate_98fceb906d36027cf2a6b292f9b4781a extends Template
                 
                 <h3>Xavier, fondateur de Cup of Tea</h3>
 \t\t\t\t<img src=\"";
-        // line 16
+        // line 29
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/img/xavier.jpg"), "html", null, true);
         echo "\" alt=\"xavier\">
 \t\t\t\t<p>Xavier, avec son palais expert et son sens aigu des affaires, a rejoint Amélie pour former l'équipe idéale. Ensemble, ils ont créé une collection de thés qui se distingue non seulement par sa qualité, mais aussi par son histoire et son impact sur les communautés productrices.</p>
@@ -99,7 +112,7 @@ class __TwigTemplate_98fceb906d36027cf2a6b292f9b4781a extends Template
 
                         <article>
                             <img src=\"";
-        // line 31
+        // line 44
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/img/concept/1.svg"), "html", null, true);
         echo "\" alt=\"Théière iconique\">
                             <h3>Artisanat Traditionnel</h3>
@@ -108,7 +121,7 @@ class __TwigTemplate_98fceb906d36027cf2a6b292f9b4781a extends Template
 
                         <article>
                             <img src=\"";
-        // line 37
+        // line 50
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/img/concept/2.svg"), "html", null, true);
         echo "\" alt=\"Coeur engagé\">
                             <h3>Engagement Éthique</h3>
@@ -117,7 +130,7 @@ class __TwigTemplate_98fceb906d36027cf2a6b292f9b4781a extends Template
 
                         <article>
                             <img src=\"";
-        // line 43
+        // line 56
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/img/concept/3.svg"), "html", null, true);
         echo "\" alt=\"Sourire satisfait\">
                             <h3>Expérience Client</h3>
@@ -153,7 +166,7 @@ class __TwigTemplate_98fceb906d36027cf2a6b292f9b4781a extends Template
 
     public function getDebugInfo()
     {
-        return array (  121 => 43,  112 => 37,  103 => 31,  85 => 16,  76 => 10,  68 => 4,  58 => 3,  35 => 1,);
+        return array (  134 => 56,  125 => 50,  116 => 44,  98 => 29,  89 => 23,  68 => 4,  58 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -161,9 +174,22 @@ class __TwigTemplate_98fceb906d36027cf2a6b292f9b4781a extends Template
         return new Source("{% extends 'base.html.twig' %} 
 
 {% block body %}
+<style>
+    .custom-container {
+        background-color: #f9f9f9; /* Fond gris clair */
+        border-radius: 10px; /* Bords arrondis */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre portée légère */
+        padding: 2rem; /* Espacement interne */
+        margin-top: 2rem; /* Marge en haut */
+        margin-bottom: 2rem; /* Marge en bas */
+        border: 1px solid #ddd; /* Bordure subtile */
+    }
+    
+    /* Vous pouvez également ajouter d'autres styles spécifiques ici */
+</style>
     <main id=\"about\">
 \t\t<section>
-\t\t\t<div class=\"container padding\">
+        <div class=\"container custom-container\">
 \t\t\t\t<h1>A propos de nous</h1>
 \t\t\t\t<h2>Notre équipe</h2>
 \t\t\t\t<h3>Amélie,fondatrice de Cup of Tea</h3>

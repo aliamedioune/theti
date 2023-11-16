@@ -1,7 +1,7 @@
 
 
 <head>
-   
+   <html lang="fr">
     <meta charset="UTF-8">
     {# <meta name="viewport" content="width=device-width, initial-scale=1.0"> #}
     {# <meta http-equiv="X-UA-Compatible" content="ie=edge"> #}
@@ -9,26 +9,31 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
     <link href="https://fonts.googleapis.com/css?family=Amaranth&display=swap" rel="stylesheet"> 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.js"></script>
     
-     <link rel="icon" href="{{ asset('uploads/images/the-logo.png') }}">
+    <link rel="icon" href="{{ asset('uploads/images/the-logo.png') }}">
         {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
         
         {# <link rel="stylesheet" href="{{ asset('bootstrap.css') }}"> #}
          {# <link rel="stylesheet" type="text/css" href="{{ asset('style.css') }}"> #}
 
+
+
     <link rel="stylesheet" href="{{ asset("assets/css/flexslider.css") }}">
     <link rel="stylesheet" href="{{ asset("assets/css/normalize.css") }}">
     <link rel="stylesheet" href="{{ asset("assets/css/style.css") }}">
     
-    <title> AtypikHouse | Votre plateforme pour résérver votre habitat partout en europe </title>
+    <title> Thé tip top </title>
     <meta name="description" content="Jeu concours The TipTop."/>
         <meta name="keywords" content="TipTop ,Thé, jeu concours"/>
         <meta name="ROBOTS" content="INDEX, FOLLOW">
          <meta name="author" content="The TipTop">
+{% block stylesheets %}{% endblock %}
     </head>
     <body>
+    
                 <style>
                 /* Réduire la taille du texte de l'annonce en haut de la page */
 header p {
@@ -120,27 +125,27 @@ header {
         {% if app.user.roles[0]== "ROLE_ADMIN" %}
             <nav>
              
-              <a class="navbar-brand" href="/admin">TeaTipTop</a>
+              <a class="navbar-brand" href="/admin">Gestion Admin</a>
               <a class="nav-link" href="/employe">Gestion des gains</a>
               <a class="nav-link" href="#" id="newsletter">Data</a>
                <a class="nav-link" href="/admin/groslot">Le gros lot</a>
                <a class="nav-link" href="/admin/users">Utilisateur</a>
                <a class="nav-link" href="/admin/employee">Employee</a>
                 <a class="nav-link" style="color:white;" href="/profil">Mon profil</a>
-                <a class="nav-link" style="color:white;" href="/logout">Déconnection</a>
+                <a class="nav-link" style="color:white;" href="/logout">Déconnexion</a>
            
             </nav>
         {% elseif app.user.roles[0]== "ROLE_EMPLOYE" %}
-                        <nav>  <a class="navbar-brand" href="/employe">TeaTipTop</a>
+                        <nav>  <a class="navbar-brand" href="/employe">Gestion Employee</a>
                                <a class="nav-link" style="color:white;" href="/profil">Mon profil</a>
-                <a class="nav-link" style="color:white;" href="/logout">Déconnection</a>
+                <a class="nav-link" style="color:white;" href="/logout">Déconnexion</a>
                         </nav>
         {% elseif app.user.roles[0]== "ROLE_USER" %}
-                <nav>    <a class="navbar-brand" href="/bienvenu">TeaTipTop</a>
-    
-                <a class="nav-link" href="/bienvenu" id="ticketsRecord">Mes gains</a>
+                <nav>    <a class="navbar-brand" href="/bienvenu">Gagner un cadeau</a>
+                <a class="nav-link" href="/mesgains" >Mes gains </a>
+                {# <a class="nav-link" href="/bienvenu" id="ticketsRecord">Mes gains</a> #}
                        <a class="nav-link" style="color:white;" href="/profil">Mon profil</a>
-                <a class="nav-link" style="color:white;" href="/logout">Déconnection</a>
+                <a class="nav-link" style="color:white;" href="/logout">Déconnexion</a>
            </nav>
 
         {% else  %}
@@ -228,7 +233,7 @@ header {
                             <li><a href="/">Première visite</a></li>
                             <li><a href="/faq">Aide - FAQ</a></li>
                             <li><a href="/mentions">Conditions générales de vente</a></li>
-                            
+                            <li><a href="/terms-and-conditions">Conditions générales du site</a></li>
                             
                         </ul>
                         <ul>
@@ -237,6 +242,7 @@ header {
                             <li><a href="The">le Thé de A à Z</a></li>
                             <li><a href="about">Notre histoire</a></li>
                             <li><a href="The">Nous boutiques</a></li>
+                            <li><a href="/sitemap.xml">Plan du site</a></li>
                         </ul>
                     </div>
                 </div>

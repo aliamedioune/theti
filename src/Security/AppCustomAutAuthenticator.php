@@ -43,15 +43,38 @@ class AppCustomAutAuthenticator extends AbstractLoginFormAuthenticator
         );
     }
 
+    // public function onAuthenticationSuccess(Request $request, TokenInterface $token, string $firewallName): ?Response
+    // {
+    //     if ($targetPath = $this->getTargetPath($request->getSession(), $firewallName)) {
+    //         return new RedirectResponse($targetPath);
+    //     }
+
+    //     // For example:
+    //     return new RedirectResponse($this->urlGenerator->generate('app_home'));
+    //     // throw new \Exception('TODO: provide a valid redirect inside '.__FILE__);
+    // }
+
     public function onAuthenticationSuccess(Request $request, TokenInterface $token, string $firewallName): ?Response
     {
+        // Use this to get the path the user was trying to access before being intercepted by the login process
         if ($targetPath = $this->getTargetPath($request->getSession(), $firewallName)) {
             return new RedirectResponse($targetPath);
         }
 
-        // For example:
+        // Get the roles of the user
+        $roles = $token->getUser()->getRoles();
+        
+        // Redirect based on the highest role (assuming ROLE_ADMIN is higher than ROLE_USER and ROLE_EMPLOYE)
+        if (in_array('ROLE_ADMIN', $roles)) {
+            return new RedirectResponse($this->urlGenerator->generate('app_admin'));
+        } elseif (in_array('ROLE_EMPLOYE', $roles)) {
+            return new RedirectResponse($this->urlGenerator->generate('app_employe'));
+        } elseif (in_array('ROLE_USER', $roles)) {
+            return new RedirectResponse($this->urlGenerator->generate('app_bienvenu'));
+        }
+
+        // Default redirection if no special roles are found
         return new RedirectResponse($this->urlGenerator->generate('app_home'));
-        // throw new \Exception('TODO: provide a valid redirect inside '.__FILE__);
     }
 
     protected function getLoginUrl(Request $request): string

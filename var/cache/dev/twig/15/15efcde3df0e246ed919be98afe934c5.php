@@ -46,9 +46,8 @@ class __TwigTemplate_6566bf0e2400db72a8eb5a85602a8de5 extends Template
     <head>
    
     <meta charset=\"UTF-8\">
+    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
     ";
-        // line 7
-        echo "    ";
         // line 8
         echo "    ";
         // line 9
@@ -177,33 +176,34 @@ header {
                 // line 117
                 echo "            <nav>
              
-              <a class=\"navbar-brand\" href=\"/admin\">TeaTipTop</a>
+              <a class=\"navbar-brand\" href=\"/admin\">Gestion Admin</a>
               <a class=\"nav-link\" href=\"/employe\">Gestion des gains</a>
               <a class=\"nav-link\" href=\"#\" id=\"newsletter\">Data</a>
                <a class=\"nav-link\" href=\"/admin/groslot\">Le gros lot</a>
                <a class=\"nav-link\" href=\"/admin/users\">Utilisateur</a>
                <a class=\"nav-link\" href=\"/admin/employee\">Employee</a>
                 <a class=\"nav-link\" style=\"color:white;\" href=\"/profil\">Mon profil</a>
-                <a class=\"nav-link\" style=\"color:white;\" href=\"/logout\">Déconnection</a>
+                <a class=\"nav-link\" style=\"color:white;\" href=\"/logout\">Déconnexion</a>
            
             </nav>
         ";
             } elseif ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source,             // line 129
 (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 129, $this->source); })()), "user", [], "any", false, false, false, 129), "roles", [], "any", false, false, false, 129), 0, [], "array", false, false, false, 129) == "ROLE_EMPLOYE")) {
                 // line 130
-                echo "                        <nav>  <a class=\"navbar-brand\" href=\"/employe\">TeaTipTop</a>
+                echo "                        <nav>  <a class=\"navbar-brand\" href=\"/employe\">Gestion Employee</a>
                                <a class=\"nav-link\" style=\"color:white;\" href=\"/profil\">Mon profil</a>
-                <a class=\"nav-link\" style=\"color:white;\" href=\"/logout\">Déconnection</a>
+                <a class=\"nav-link\" style=\"color:white;\" href=\"/logout\">Déconnexion</a>
                         </nav>
         ";
             } elseif ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source,             // line 134
 (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 134, $this->source); })()), "user", [], "any", false, false, false, 134), "roles", [], "any", false, false, false, 134), 0, [], "array", false, false, false, 134) == "ROLE_USER")) {
                 // line 135
-                echo "                <nav>    <a class=\"navbar-brand\" href=\"/bienvenu\">TeaTipTop</a>
-    
-                <a class=\"nav-link\" href=\"/bienvenu\" id=\"ticketsRecord\">Mes gains</a>
-                       <a class=\"nav-link\" style=\"color:white;\" href=\"/profil\">Mon profil</a>
-                <a class=\"nav-link\" style=\"color:white;\" href=\"/logout\">Déconnection</a>
+                echo "                <nav>    <a class=\"navbar-brand\" href=\"/bienvenu\">Gagner un cadeau</a>
+                <a class=\"nav-link\" href=\"/mesgains\" >Mes gains</a>
+                ";
+                // line 138
+                echo "                       <a class=\"nav-link\" style=\"color:white;\" href=\"/profil\">Mon profil</a>
+                <a class=\"nav-link\" style=\"color:white;\" href=\"/logout\">Déconnexion</a>
            </nav>
 
         ";
@@ -289,37 +289,35 @@ header {
                     <div class=\"container flexul\">
                         <ul>
                             <li><h4 class=\"upper\">cup of tea</h4></li>
-                            <li><a href=\"\">Notre histoire</a></li>
-                            <li><a href=\"\">Nos boutiques</a></li>
-                            <li><a href=\"\">Le thé de A à Z</a></li>
-                            <li><a href=\"\">Espace Clients Professionnels</a></li>
-                            <li><a href=\"\">Recrutement</a></li>
+                            <li><a href=\"about\">Notre histoire</a></li>
+                            <li><a href=\"The\">Nos boutiques</a></li>
+                            <li><a href=\"The\">Le thé de A à Z</a></li>
                             <li><a href=\"\">Contactez-nous!</a></li>
-                            <li><a href=\"\">L'Ecole du thé</a></li>
+                            
                         </ul>
                         <ul>
                             <li><h4 class=\"upper\">commander en ligne</h4></li>
-                            <li><a href=\"\">Première visite</a></li>
-                            <li><a href=\"\">Aide - FAQ</a></li>
-                            <li><a href=\"\">Service client</a></li>
-                            <li><a href=\"\">Suivre ma commande</a></li>
-                            <li><a href=\"\">Conditions générales de vente</a></li>
-                            <li><a href=\"\">Information légales</a></li>
+                            <li><a href=\"/\">Première visite</a></li>
+                            <li><a href=\"/faq\">Aide - FAQ</a></li>
+                            <li><a href=\"/mentions\">Conditions générales de vente</a></li>
+                            <li><a href=\"/terms-and-conditions\">Conditions générales du site</a></li>
                             
                         </ul>
                         <ul>
                             <li><h4 class=\"upper\">suivez-nous</h4></li>
-                            <li><a href=\"\">Notre histoire</a></li>
-                            <li><a href=\"\">Nous boutiques</a></li>
-                            <li><a href=\"\">le Thé de A à Z</a></li>
-                            <li><a href=\"\">Espace cliets professionnels</a></li> 
+                            
+                            <li><a href=\"The\">le Thé de A à Z</a></li>
+                            <li><a href=\"about\">Notre histoire</a></li>
+                            <li><a href=\"The\">Nous boutiques</a></li>
                         </ul>
                     </div>
                 </div>
                 <div id=\"footer\" class=\"padding\">
                     <div class=\"container\">
-                        
-                        <p style=\"text-decoration: underline;\" ><a>Ce site web est fictif et a été créé uniquement à des fins éducatives et de démonstration. Aucun produit ou service réel n'est offert ici. Toutes les informations et les éléments présents sur ce site sont simulés. Merci de ne pas fournir d'informations personnelles ou sensibles.</a>.</p>
+                      <p style=\"text-decoration: underline;\" > © 2023 : Thé TipTop<a> 
+<br>
+
+                        <p style=\"text-decoration: underline;\" ><a> Ce site web est fictif et a été créé uniquement à des fins éducatives et de démonstration. Aucun produit ou service réel n'est offert ici. Toutes les informations et les éléments présents sur ce site sont simulés. Merci de ne pas fournir d'informations personnelles ou sensibles.</a>.</p>
                     </div>
 
                     
@@ -370,7 +368,7 @@ header {
 
     public function getDebugInfo()
     {
-        return array (  344 => 195,  272 => 196,  270 => 195,  235 => 162,  224 => 153,  212 => 143,  202 => 135,  200 => 134,  194 => 130,  192 => 129,  178 => 117,  175 => 116,  173 => 115,  166 => 101,  161 => 98,  152 => 92,  80 => 23,  76 => 22,  72 => 21,  69 => 20,  67 => 19,  64 => 17,  55 => 9,  53 => 8,  51 => 7,  44 => 1,);
+        return array (  342 => 195,  272 => 196,  270 => 195,  235 => 162,  224 => 153,  212 => 143,  205 => 138,  201 => 135,  199 => 134,  193 => 130,  191 => 129,  177 => 117,  174 => 116,  172 => 115,  165 => 101,  160 => 98,  151 => 92,  79 => 23,  75 => 22,  71 => 21,  68 => 20,  66 => 19,  63 => 17,  54 => 9,  52 => 8,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -380,7 +378,7 @@ header {
     <head>
    
     <meta charset=\"UTF-8\">
-    {# <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"> #}
+    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
     {# <meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\"> #}
     {# <link href=\"https://fonts.googleapis.com/css?family=Open+Sans&display=swap\" rel=\"stylesheet\"> #}
     <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css\" integrity=\"sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=\" crossorigin=\"anonymous\" />
@@ -493,27 +491,27 @@ header {
         {% if app.user.roles[0]== \"ROLE_ADMIN\" %}
             <nav>
              
-              <a class=\"navbar-brand\" href=\"/admin\">TeaTipTop</a>
+              <a class=\"navbar-brand\" href=\"/admin\">Gestion Admin</a>
               <a class=\"nav-link\" href=\"/employe\">Gestion des gains</a>
               <a class=\"nav-link\" href=\"#\" id=\"newsletter\">Data</a>
                <a class=\"nav-link\" href=\"/admin/groslot\">Le gros lot</a>
                <a class=\"nav-link\" href=\"/admin/users\">Utilisateur</a>
                <a class=\"nav-link\" href=\"/admin/employee\">Employee</a>
                 <a class=\"nav-link\" style=\"color:white;\" href=\"/profil\">Mon profil</a>
-                <a class=\"nav-link\" style=\"color:white;\" href=\"/logout\">Déconnection</a>
+                <a class=\"nav-link\" style=\"color:white;\" href=\"/logout\">Déconnexion</a>
            
             </nav>
         {% elseif app.user.roles[0]== \"ROLE_EMPLOYE\" %}
-                        <nav>  <a class=\"navbar-brand\" href=\"/employe\">TeaTipTop</a>
+                        <nav>  <a class=\"navbar-brand\" href=\"/employe\">Gestion Employee</a>
                                <a class=\"nav-link\" style=\"color:white;\" href=\"/profil\">Mon profil</a>
-                <a class=\"nav-link\" style=\"color:white;\" href=\"/logout\">Déconnection</a>
+                <a class=\"nav-link\" style=\"color:white;\" href=\"/logout\">Déconnexion</a>
                         </nav>
         {% elseif app.user.roles[0]== \"ROLE_USER\" %}
-                <nav>    <a class=\"navbar-brand\" href=\"/bienvenu\">TeaTipTop</a>
-    
-                <a class=\"nav-link\" href=\"/bienvenu\" id=\"ticketsRecord\">Mes gains</a>
+                <nav>    <a class=\"navbar-brand\" href=\"/bienvenu\">Gagner un cadeau</a>
+                <a class=\"nav-link\" href=\"/mesgains\" >Mes gains</a>
+                {# <a class=\"nav-link\" href=\"/bienvenu\" id=\"ticketsRecord\">Mes gains</a> #}
                        <a class=\"nav-link\" style=\"color:white;\" href=\"/profil\">Mon profil</a>
-                <a class=\"nav-link\" style=\"color:white;\" href=\"/logout\">Déconnection</a>
+                <a class=\"nav-link\" style=\"color:white;\" href=\"/logout\">Déconnexion</a>
            </nav>
 
         {% else  %}
@@ -590,37 +588,35 @@ header {
                     <div class=\"container flexul\">
                         <ul>
                             <li><h4 class=\"upper\">cup of tea</h4></li>
-                            <li><a href=\"\">Notre histoire</a></li>
-                            <li><a href=\"\">Nos boutiques</a></li>
-                            <li><a href=\"\">Le thé de A à Z</a></li>
-                            <li><a href=\"\">Espace Clients Professionnels</a></li>
-                            <li><a href=\"\">Recrutement</a></li>
+                            <li><a href=\"about\">Notre histoire</a></li>
+                            <li><a href=\"The\">Nos boutiques</a></li>
+                            <li><a href=\"The\">Le thé de A à Z</a></li>
                             <li><a href=\"\">Contactez-nous!</a></li>
-                            <li><a href=\"\">L'Ecole du thé</a></li>
+                            
                         </ul>
                         <ul>
                             <li><h4 class=\"upper\">commander en ligne</h4></li>
-                            <li><a href=\"\">Première visite</a></li>
-                            <li><a href=\"\">Aide - FAQ</a></li>
-                            <li><a href=\"\">Service client</a></li>
-                            <li><a href=\"\">Suivre ma commande</a></li>
-                            <li><a href=\"\">Conditions générales de vente</a></li>
-                            <li><a href=\"\">Information légales</a></li>
+                            <li><a href=\"/\">Première visite</a></li>
+                            <li><a href=\"/faq\">Aide - FAQ</a></li>
+                            <li><a href=\"/mentions\">Conditions générales de vente</a></li>
+                            <li><a href=\"/terms-and-conditions\">Conditions générales du site</a></li>
                             
                         </ul>
                         <ul>
                             <li><h4 class=\"upper\">suivez-nous</h4></li>
-                            <li><a href=\"\">Notre histoire</a></li>
-                            <li><a href=\"\">Nous boutiques</a></li>
-                            <li><a href=\"\">le Thé de A à Z</a></li>
-                            <li><a href=\"\">Espace cliets professionnels</a></li> 
+                            
+                            <li><a href=\"The\">le Thé de A à Z</a></li>
+                            <li><a href=\"about\">Notre histoire</a></li>
+                            <li><a href=\"The\">Nous boutiques</a></li>
                         </ul>
                     </div>
                 </div>
                 <div id=\"footer\" class=\"padding\">
                     <div class=\"container\">
-                        
-                        <p style=\"text-decoration: underline;\" ><a>Ce site web est fictif et a été créé uniquement à des fins éducatives et de démonstration. Aucun produit ou service réel n'est offert ici. Toutes les informations et les éléments présents sur ce site sont simulés. Merci de ne pas fournir d'informations personnelles ou sensibles.</a>.</p>
+                      <p style=\"text-decoration: underline;\" > © 2023 : Thé TipTop<a> 
+<br>
+
+                        <p style=\"text-decoration: underline;\" ><a> Ce site web est fictif et a été créé uniquement à des fins éducatives et de démonstration. Aucun produit ou service réel n'est offert ici. Toutes les informations et les éléments présents sur ce site sont simulés. Merci de ne pas fournir d'informations personnelles ou sensibles.</a>.</p>
                     </div>
 
                     

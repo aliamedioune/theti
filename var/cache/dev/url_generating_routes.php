@@ -65,6 +65,7 @@ return [
     'faq' => [[], ['_controller' => 'App\\Controller\\HomeController::faq'], [], [['text', '/faq']], [], [], []],
     'terms-and-conditions' => [[], ['_controller' => 'App\\Controller\\HomeController::termsAndCondition'], [], [['text', '/terms-and-conditions']], [], [], []],
     'app_bienvenu' => [[], ['_controller' => 'App\\Controller\\HomeController::bienvenu'], [], [['text', '/bienvenu']], [], [], []],
+    'app_mesgains' => [[], ['_controller' => 'App\\Controller\\HomeController::mesgains'], [], [['text', '/mesgains']], [], [], []],
     'profil' => [[], ['_controller' => 'App\\Controller\\HomeController::profilAction'], [], [['text', '/profil']], [], [], []],
     'mentions' => [[], ['_controller' => 'App\\Controller\\HomeController::montionAction'], [], [['text', '/mentions']], [], [], []],
     'app_code_cadeau_check' => [[], ['_controller' => 'App\\Controller\\HomeController::codecadeauCheck'], [], [['text', '/codecadeau/check']], [], [], []],

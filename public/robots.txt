@@ -4,4 +4,4 @@ Disallow: /admin/
 Disallow: /employe/
 
 User-agent: *
-Sitemap: http://dsp-archiwebf22-aa.fr/public/sitemap.xml
+Sitemap: http://dsp-archiwebf22-aa.fr/sitemap.xml

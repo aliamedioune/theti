@@ -27,21 +27,39 @@ class EmployeController extends AbstractController
         $this->userRepository = $userRepository;
     }
             
+    // /**
+    //  * @IsGranted("ROLE_EMPLOYE")
+    //  * @Route("/employe", name="app_employe")
+    //  */
+    // public function employe(Request $request): Response
+    // {
+    //     $user = $this->getUser();
+    //     if(!$user){
+    //         return $this->redirectToRoute('app_login', []);  
+    //     }
+        
+        
+    //     return $this->render('employe/index.html.twig');
+    // }
+
     /**
      * @IsGranted("ROLE_EMPLOYE")
      * @Route("/employe", name="app_employe")
      */
-    public function employe(Request $request): Response
+    public function employe(): Response
     {
-        $user = $this->getUser();
-        if(!$user){
-            return $this->redirectToRoute('app_login', []);  
-        }
-        
-        
-        return $this->render('employe/index.html.twig');
-    }
+        // Assurez-vous que cette méthode retourne bien ce que vous attendez.
+        $usersWithGains = $this->userRepository->findAllUsersWithGains();
 
+        // Utilisez cette instruction pour débugger et vérifier le contenu de $usersWithGains
+        dump($usersWithGains);
+
+        // La méthode render doit être appelée avec le tableau de variables à passer au template.
+        return $this->render('employe/index.html.twig', [
+            'users_with_gains' => $usersWithGains,
+        ]);
+    }
+            
         /**
      * @IsGranted("ROLE_EMPLOYE")
      * @Route("/gains", name="gains")
@@ -71,7 +89,8 @@ class EmployeController extends AbstractController
         $wins= $this->winnersRepository->findBy(['user' => $user]);;
         $this->em->persist($ticket);
         $this->em->flush();
-        $this->addFlash('Success',"Vous avez donné le gain ! ");  
+        $surname = $user->getSurname(); // Or however you can get the username from the User object
+        $this->addFlash('Success', "Vous avez donné le gain à *" . $surname . "* ! "); 
         return $this->render('employe/gains.html.twig', [
             'wins' => $wins,
         ]);
