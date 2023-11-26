@@ -1,21 +1,32 @@
-# Utilisez une image Symfony prête à l'emploi
-FROM php:7.4-apache
+# Use an official PHP image as the base image
+FROM php:8.1-fpm
 
-# Installez les dépendances nécessaires (si nécessaire)
-RUN apt-get update && \
-    apt-get install -y git unzip
-
-# Créez un répertoire de travail
+# Set the working directory in the container
 WORKDIR /var/www/html
 
-# Clonez votre projet depuis GitHub
-RUN git clone https://github.com/aliamedioune/theti.git .
+# Copy composer files and install dependencies
+COPY composer.json composer.lock ./
+RUN apt-get update && apt-get install -y \
+    git \
+    zip \
+    unzip \
+    && apt-get clean \
+    && docker-php-ext-install pdo_mysql \
+    && pecl install xdebug \
+    && docker-php-ext-enable xdebug \
+    && curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer \
+    && composer install --no-scripts --no-autoloader
 
-# Installez les dépendances Symfony
-RUN composer install --no-scripts --no-interaction
+# Copy the rest of the application
+COPY . .
 
-# Exposez le port 80 pour Apache
-EXPOSE 80
+# Set permissions if needed
+# RUN chown -R www-data:www-data /var/www/html
+# RUN chmod -R 755 /var/www/html/var
 
-# Démarrez Apache
-CMD ["apache2-foreground"]
+# Expose port 8000 to the outside world
+EXPOSE 8000
+
+# Start the Symfony server
+#CMD ["php", "bin/console", "server:run", "0.0.0.0:8000"]
+CMD ["php", "-S", "0.0.0.0:8000", "-t", "public"]
