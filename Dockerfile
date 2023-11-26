@@ -18,7 +18,7 @@ RUN apt-get update && apt-get install -y \
     && composer install --no-scripts --no-autoloader
 
 # Copy the rest of the application
-COPY . /mnt/new_volume
+COPY . .
 
 # Set permissions if needed
 # RUN chown -R www-data:www-data /var/www/html
