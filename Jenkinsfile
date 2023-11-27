@@ -5,7 +5,7 @@ stages {
 
 stage('Get Repo') {
 steps {
-deleteDir()
+sh 'sudo rm -r /var/jenkins_home/workspace/CI CD/*'
 git branch: 'main', url: 'https://github.com/alexdoe99/theti.git'
 }
 }
