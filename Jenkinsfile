@@ -12,7 +12,7 @@ pipeline {
       stage('Get Repo') {
             steps {
                 sh 'sudo rm -r /var/jenkins_home/workspace/theti/*'
-                git branch: 'main', url: 'https://github.com/aliamedioune/theti'
+                git branch: 'master', url: 'https://github.com/aliamedioune/theti'
             }
         }
 }
