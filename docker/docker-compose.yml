@@ -4,7 +4,7 @@ services:
 #PHP 7.4-fpm
   php:
     build:
-      context: /var/jenkins_home/workspace/CICDWORKFLOW
+      context: /home/ubuntu/theti/docker
       dockerfile: Dockerfilephp
     container_name: '${PROJECT_NAME}_php'
     environment:
@@ -17,7 +17,7 @@ services:
 #NGINX nginx-proxy
   nginx:
     build:
-      context: /var/jenkins_home/workspace/CICDWORKFLOW
+      context: /home/ubuntu/theti/docker
       dockerfile: Dockerfile
     container_name: '${PROJECT_NAME}_nginx'
 
@@ -29,7 +29,7 @@ services:
 #MYSQL 8.0.19
   mysql:
     build:
-      context: /var/jenkins_home/workspace/CICDWORKFLOW/mysql
+      context: /home/ubuntu/theti/docker/mysql
       dockerfile: Dockerfile
     container_name: '${PROJECT_NAME}_mysql'
     environment:
