@@ -4,7 +4,7 @@ services:
 #PHP 7.4-fpm
   php:
     build:
-      context: /home/ubuntu/theti/docker
+      context: /home/ubuntu/theti
       dockerfile: Dockerfilephp
     container_name: '${PROJECT_NAME}_php'
     environment:
@@ -17,7 +17,7 @@ services:
 #NGINX nginx-proxy
   nginx:
     build:
-      context: /home/ubuntu/theti/docker
+      context: /home/ubuntu/theti
       dockerfile: Dockerfile
     container_name: '${PROJECT_NAME}_nginx'
 
@@ -29,7 +29,7 @@ services:
 #MYSQL 8.0.19
   mysql:
     build:
-      context: /home/ubuntu/theti/docker/mysql
+      context: /home/ubuntu/theti/mysql
       dockerfile: Dockerfile
     container_name: '${PROJECT_NAME}_mysql'
     environment:
