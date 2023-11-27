@@ -12,14 +12,14 @@ pipeline {
         stage('Old build down') {
             steps {
                 sh 'sudo chmod 777 /var/run/docker.sock'
-                sh 'sudo chmod 777 -R /home/ubuntu/theti/docker/'
+                sh 'sudo chmod 777 -R /var/lib/jenkins/workspace/CI CD 2/'
                 sh 'docker-compose -f /home/ubuntu/theti/docker/docker-compose.yml down'
             }
         }
 
         stage('Build UP') {
             steps {
-                sh 'docker build -t theti /home/ubuntu/theti/docker/'
+                sh 'docker build -t theti /var/lib/jenkins/workspace/CI CD 2/'
                 sh 'docker-compose -f /home/ubuntu/theti/docker/docker-compose.yml up --build -d'
             }
         }
