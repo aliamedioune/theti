@@ -14,7 +14,7 @@ stage('old build down') {
 steps {
     sh 'sudo chmod 777 -R /var/run/docker.sock'
     sh 'sudo chmod 777 -R /var/lib/jenkins/workspace/CICD/'
-    sh 'cd /var/lib/jenkins/workspace/CICD/docker && docker compose down'
+    sh 'cd /var/lib/jenkins/workspace/CICD/docker/docker && docker compose down'
 }
 }
 
@@ -25,7 +25,7 @@ stage('Build UP') {
 steps {
 
 sh 'docker build -t theti .'
-sh 'cd /var/lib/jenkins/workspace/CICD/docker && docker compose up -d --build'
+sh 'cd /var/lib/jenkins/workspace/CICD/docker/docker && docker compose up -d --build'
 }
 }
 stage('Test') {
