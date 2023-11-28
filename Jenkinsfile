@@ -23,7 +23,7 @@ steps {
 
 stage('Build UP') {
 steps {
-
+sh 'docker kill theti .'
 sh 'docker build -t theti .'
 sh 'cd /var/lib/jenkins/workspace/CICD/docker/ docker && docker-compose up -d --build'
 }
