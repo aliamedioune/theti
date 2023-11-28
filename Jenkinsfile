@@ -9,5 +9,13 @@ pipeline {
                 }
             }
         }
+
+        stage('Build and Deploy') {
+            steps {
+                dir('/home/ubuntu/theti') {
+                    sh 'docker-compose up --build -d'
+                }
+            }
+        }
     }
 }
