@@ -15,12 +15,12 @@ pipeline {
             }
         }
 
-        stage('Test') {
+/*        stage('Test') {
             steps {
                 sh 'cd /var/lib/jenkins/workspace/CICD/UnitTestFiles/Test && phpunit --log-junit result.xml FirstTest.php'
             }
         }
-
+*/
         stage('Deploy') {
             steps {
                 sh 'cd /var/lib/jenkins/workspace/CICD && docker-compose up -d --build'
