@@ -4,10 +4,9 @@ pipeline {
     stages {
         stage('Prepare') {
             steps {
-                // Go to the specified directory
+                // Checkout code into a directory and initialize a Git repository
                 dir('/home/ubuntu/theti') {
-                    // Pull from the master branch of your repository
-                    git branch: 'master', url: 'https://github.com/alexdoe99/theti.git'
+                    git url: 'https://github.com/alexdoe99/theti.git'
                 }
             }
         }
@@ -15,7 +14,7 @@ pipeline {
         stage('Build and Deploy') {
             steps {
                 // Run docker-compose up --build -d
-                sh 'docker-compose up --build -d'
+                sh 'cd /home/ubuntu/theti && docker-compose up --build -d'
             }
         }
     }
