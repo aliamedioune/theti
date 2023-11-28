@@ -15,11 +15,13 @@ pipeline {
             }
         }
 
-#        stage('Test') {
-#            steps {
-#                sh 'cd /var/lib/jenkins/workspace/CICD/UnitTestFiles/Test && phpunit --log-junit result.xml FirstTest.php'
-#            }
-#        }
+        /* Commented out the 'Test' stage
+        stage('Test') {
+            steps {
+                sh 'cd /var/lib/jenkins/workspace/CICD/UnitTestFiles/Test && phpunit --log-junit result.xml FirstTest.php'
+            }
+        }
+        */
 
         stage('Deploy') {
             steps {
