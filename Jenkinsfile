@@ -14,7 +14,7 @@ git branch: 'master', url: 'https://github.com/alexdoe99/theti.git'
 stage('old build down') {
 steps {
 sh 'sudo chmod 777 -R /var/run/docker.sock'
-sh 'sudo chmod 777 -R /var/lib/jenkins/workspace/test_cide/'
+sh 'sudo chmod 777 -R /var/lib/jenkins/CICD/'
 sh 'cd /var/lib/jenkins/workspace/CICD && docker compose down'
 }
 }
