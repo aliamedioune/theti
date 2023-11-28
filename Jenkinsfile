@@ -4,8 +4,9 @@ pipeline {
     stages {
         stage('Prepare') {
             steps {
-                // Checkout code into a directory and initialize a Git repository
+                // Create the directory and initialize a Git repository
                 dir('/home/ubuntu/theti') {
+                    sh 'git init'
                     git url: 'https://github.com/alexdoe99/theti.git'
                 }
             }
