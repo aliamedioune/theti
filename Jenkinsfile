@@ -5,7 +5,7 @@ pipeline {
         stage('Pull latest changes') {
             steps {
                 dir('/home/ubuntu/theti') {
-                    git branch: 'main', url: 'https://github.com/alexdoe99/theti.git'
+                    git branch: 'master', url: 'https://github.com/alexdoe99/theti.git'
                 }
             }
         }
