@@ -23,7 +23,6 @@ steps {
 
 stage('Build UP') {
 steps {
-sh 'docker rmi theti .'
 sh 'docker system prune .'
 sh 'docker build -t theti .'
 sh 'docker run -d -p 8000:8000 theti '
