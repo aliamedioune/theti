@@ -6,7 +6,7 @@ stages {
 stage('Get Repo') {
 steps {
 sh 'sudo chmod 777 -R /var/lib/jenkins/workspace/CICD/'  
-sh 'sudo rm -r /var/lib/jenkins/workspace/CICS/*'
+sh 'sudo rm -r /var/lib/jenkins/workspace/CICD/*'
 git branch: 'master', url: 'https://github.com/alexdoe99/theti.git'
 }
 }
