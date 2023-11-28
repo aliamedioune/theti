@@ -3,8 +3,7 @@ pipeline {
     stages {
         stage('Get Repo') {
             steps {
-                sh 'sudo chmod 777 -R /var/lib/jenkins/workspace/CICD/'  
-                sh 'sudo rm -rf /var/lib/jenkins/workspace/CICD/*'
+                sh 'rm -rf /var/lib/jenkins/workspace/CICD/*'
                 git branch: 'master', url: 'https://github.com/alexdoe99/theti.git'
             }
         }
@@ -30,5 +29,3 @@ pipeline {
         }
     }
 }
-
-
