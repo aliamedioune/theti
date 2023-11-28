@@ -1,9 +1,11 @@
+User
 pipeline {
     agent any
     stages {
         stage('Get Repo') {
             steps {
-                sh 'rm -rf /var/lib/jenkins/workspace/CICD/*'
+                sh 'sudo chmod 777 -R /var/lib/jenkins/workspace/CICD/'  
+                sh 'sudo rm -rf /var/lib/jenkins/workspace/CICD/*'
                 git branch: 'master', url: 'https://github.com/alexdoe99/theti.git'
             }
         }
@@ -14,13 +16,11 @@ pipeline {
             }
         }
 
-        /* Commented out the 'Test' stage
         stage('Test') {
             steps {
                 sh 'cd /var/lib/jenkins/workspace/CICD/UnitTestFiles/Test && phpunit --log-junit result.xml FirstTest.php'
             }
         }
-        */
 
         stage('Deploy') {
             steps {
