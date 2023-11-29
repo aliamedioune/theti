@@ -37,3 +37,4 @@ sh 'cd /var/lib/jenkins/workspace/CICD && phpunit --log-junit result.xml UnitTes
 
 }
 }
+
