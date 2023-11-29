@@ -26,7 +26,7 @@ steps {
 
 /*sh 'docker build -t theti .'
 sh 'docker run -d -p 8000:8000 theti ' */
-sh 'cd /var/lib/jenkins/workspace/CICD/ && docker-compose up -d --build'
+sh 'cd /var/lib/jenkins/workspace/CICD/ && docker-compose up -d'
 }
 }
 stage('Test') {
