@@ -84,7 +84,42 @@ class HomeController extends AbstractController
     {
         return $this->render('home/terms-and-conditions.html.twig');
     }
-    
+
+    /**
+     * @Route("/set-cookie", name="set_cookie")
+     */
+    public function setCookie(): Response
+    {
+        // Création d'un cookie avec le nom 'example_cookie' et la valeur 'Hello, Symfony!'
+        $cookie = new Cookie('example_cookie', 'Hello, Symfony!', strtotime('now + 1 day'));
+
+        // Envoi du cookie dans la réponse
+        $response = new Response();
+        $response->headers->setCookie($cookie);
+        $response->send();
+
+        return $this->render('home/cookies.html.twig');
+    }
+
+
+    /**
+     * @Route("/contact", name="contact")
+     */
+    public function contact(Request $request): Response
+    {
+        $formSubmitted = false;
+
+        if ($request->isMethod('POST')) {
+            // Traitement du formulaire (à personnaliser selon vos besoins)
+
+            // Marquer le formulaire comme soumis
+            $formSubmitted = true;
+        }
+
+        return $this->render('contact/index.html.twig', [
+            'form_submitted' => $formSubmitted,
+        ]);
+    }
 
     public function index1(Request $request): Response
     {

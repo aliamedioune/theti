@@ -218,7 +218,7 @@ header {
                     <a href=\"/\" class=\"upper\">Accueil</a>
                     <a href=\"The\" class=\"upper\">thés</a>
                    
-                    <a href=\"\" class=\"upper\">contact</a>
+                    <a href=\"/contact\" class=\"upper\">contact</a>
                     <a href=\"/login\" class=\"upper\">Se connecter</a>
                     <a href=\"about\" class=\"upper\">notre histoire</a>
                 </nav>
@@ -230,7 +230,7 @@ header {
                     <a href=\"/\" class=\"upper\">Accueil</a>
                     <a href=\"The\" class=\"upper\">thés</a>
                    
-                    <a href=\"\" class=\"upper\">contact</a>
+                    <a href=\"/contact\" class=\"upper\">contact</a>
                     <a href=\"/login\" class=\"upper\">Se connecter</a>
                     <a href=\"about\" class=\"upper\">notre histoire</a>
                 </nav>
@@ -538,7 +538,7 @@ header {
                     <a href=\"/\" class=\"upper\">Accueil</a>
                     <a href=\"The\" class=\"upper\">thés</a>
                    
-                    <a href=\"\" class=\"upper\">contact</a>
+                    <a href=\"/contact\" class=\"upper\">contact</a>
                     <a href=\"/login\" class=\"upper\">Se connecter</a>
                     <a href=\"about\" class=\"upper\">notre histoire</a>
                 </nav>
@@ -548,7 +548,7 @@ header {
                     <a href=\"/\" class=\"upper\">Accueil</a>
                     <a href=\"The\" class=\"upper\">thés</a>
                    
-                    <a href=\"\" class=\"upper\">contact</a>
+                    <a href=\"/contact\" class=\"upper\">contact</a>
                     <a href=\"/login\" class=\"upper\">Se connecter</a>
                     <a href=\"about\" class=\"upper\">notre histoire</a>
                 </nav>

@@ -29,6 +29,7 @@ class __TwigTemplate_8baf080ffd175a823e5b83884af2c084 extends Template
         $this->blocks = [
             'stylesheets' => [$this, 'block_stylesheets'],
             'body' => [$this, 'block_body'],
+            'javascripts' => [$this, 'block_javascripts'],
         ];
     }
 
@@ -230,7 +231,7 @@ header {
                     <a href=\"/\" class=\"upper\">Accueil</a>
                     <a href=\"The\" class=\"upper\">thés</a>
                    
-                    <a href=\"\" class=\"upper\">contact</a>
+                    <a href=\"/contact\" class=\"upper\">contact</a>
                     <a href=\"/login\" class=\"upper\">Se connecter</a>
                     <a href=\"about\" class=\"upper\">notre histoire</a>
                 </nav>
@@ -242,7 +243,7 @@ header {
                     <a href=\"/\" class=\"upper\">Accueil</a>
                     <a href=\"The\" class=\"upper\">thés</a>
                    
-                    <a href=\"\" class=\"upper\">contact</a>
+                    <a href=\"/contact\" class=\"upper\">contact</a>
                     <a href=\"/login\" class=\"upper\">Se connecter</a>
                     <a href=\"about\" class=\"upper\">notre histoire</a>
                 </nav>
@@ -251,41 +252,13 @@ header {
         // line 171
         echo "
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             </div>
 
         </header>
         ";
-        // line 204
+        // line 176
         $this->displayBlock('body', $context, $blocks);
-        // line 205
+        // line 182
         echo "        <footer>
 
             
@@ -309,7 +282,7 @@ header {
                             <li><a href=\"about\">Notre histoire</a></li>
                             <li><a href=\"The\">Nos boutiques</a></li>
                             <li><a href=\"The\">Le thé de A à Z</a></li>
-                            <li><a href=\"\">Contactez-nous!</a></li>
+                            <li><a href=\"/contact\">Contactez-nous!</a></li>
                             
                         </ul>
                         <ul>
@@ -346,7 +319,7 @@ header {
             
         <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js\"></script>
         <script src=\"";
-        // line 264
+        // line 241
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/js/jquery.flexslider.js"), "html", null, true);
         echo "\"></script>
     
@@ -356,7 +329,8 @@ header {
         });
         </script>
     </body>
-</html>";
+</html>
+";
         
         $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
 
@@ -383,7 +357,7 @@ header {
 
     }
 
-    // line 204
+    // line 176
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -393,6 +367,36 @@ header {
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
+        // line 177
+        echo "        ";
+        $this->loadTemplate("cookie/cookie_consent.html.twig", "base.html.twig", 177)->display($context);
+        // line 178
+        echo "
+    ";
+        // line 179
+        $this->displayBlock('javascripts', $context, $blocks);
+        // line 181
+        echo "        ";
+        
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
+
+        
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
+
+    }
+
+    // line 179
+    public function block_javascripts($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2 = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
+
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
+
+        // line 180
+        echo "    ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -413,7 +417,7 @@ header {
 
     public function getDebugInfo()
     {
-        return array (  387 => 204,  369 => 33,  350 => 264,  289 => 205,  287 => 204,  252 => 171,  241 => 162,  229 => 152,  222 => 147,  218 => 144,  216 => 143,  210 => 139,  208 => 138,  194 => 126,  191 => 125,  189 => 124,  182 => 110,  177 => 107,  168 => 101,  99 => 34,  97 => 33,  87 => 26,  83 => 25,  79 => 24,  74 => 21,  72 => 20,  69 => 18,  65 => 16,  56 => 9,  54 => 8,  52 => 7,  45 => 1,);
+        return array (  399 => 180,  389 => 179,  379 => 181,  377 => 179,  374 => 178,  371 => 177,  361 => 176,  343 => 33,  323 => 241,  262 => 182,  260 => 176,  253 => 171,  242 => 162,  230 => 152,  223 => 147,  219 => 144,  217 => 143,  211 => 139,  209 => 138,  195 => 126,  192 => 125,  190 => 124,  183 => 110,  178 => 107,  169 => 101,  100 => 34,  98 => 33,  88 => 26,  84 => 25,  80 => 24,  75 => 21,  73 => 20,  70 => 18,  66 => 16,  57 => 9,  55 => 8,  53 => 7,  46 => 1,);
     }
 
     public function getSourceContext()
@@ -573,7 +577,7 @@ header {
                     <a href=\"/\" class=\"upper\">Accueil</a>
                     <a href=\"The\" class=\"upper\">thés</a>
                    
-                    <a href=\"\" class=\"upper\">contact</a>
+                    <a href=\"/contact\" class=\"upper\">contact</a>
                     <a href=\"/login\" class=\"upper\">Se connecter</a>
                     <a href=\"about\" class=\"upper\">notre histoire</a>
                 </nav>
@@ -583,45 +587,22 @@ header {
                     <a href=\"/\" class=\"upper\">Accueil</a>
                     <a href=\"The\" class=\"upper\">thés</a>
                    
-                    <a href=\"\" class=\"upper\">contact</a>
+                    <a href=\"/contact\" class=\"upper\">contact</a>
                     <a href=\"/login\" class=\"upper\">Se connecter</a>
                     <a href=\"about\" class=\"upper\">notre histoire</a>
                 </nav>
 {% endif %}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             </div>
 
         </header>
-        {% block body %}{% endblock %}
+        {% block body %}
+        {% include 'cookie/cookie_consent.html.twig' %}
+
+    {% block javascripts %}
+    {% endblock %}
+        {% endblock %}
         <footer>
 
             
@@ -645,7 +626,7 @@ header {
                             <li><a href=\"about\">Notre histoire</a></li>
                             <li><a href=\"The\">Nos boutiques</a></li>
                             <li><a href=\"The\">Le thé de A à Z</a></li>
-                            <li><a href=\"\">Contactez-nous!</a></li>
+                            <li><a href=\"/contact\">Contactez-nous!</a></li>
                             
                         </ul>
                         <ul>
@@ -689,6 +670,7 @@ header {
         });
         </script>
     </body>
-</html>", "base.html.twig", "C:\\Users\\ASUS ROG STRIX\\Desktop\\bac+5\\apprendre\\Nouveau dossier\\Tiptop101123\\Tiptop\\Tiptop\\templates\\base.html.twig");
+</html>
+", "base.html.twig", "C:\\Users\\ASUS ROG STRIX\\Desktop\\bac+5\\apprendre\\Nouveau dossier\\Tiptop101123\\Tiptop\\Tiptop\\templates\\base.html.twig");
     }
 }

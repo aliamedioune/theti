@@ -2,6 +2,7 @@
 
 
 
+
 {% block body %}
         <style>
         #choix {
@@ -146,9 +147,22 @@ body, html {
 }
 
 
-        </style>
-        
 
+        </style>
+                    
+            
+<div id="cookie-consent-banner" style="background-color: #f1f1f1; padding: 8px; position: fixed; bottom: 0; width: 20%; text-align: center;">
+    <p>Ce site utilise des cookies. En continuant à naviguer, vous acceptez notre utilisation des cookies.</p>
+    <button id="accept-cookies" style="background-color: #4caf50; color: white; padding: 4px 8px; border: none; border-radius: 3px; cursor: pointer; font-size: 14px;">Accepter</button>
+    <a href="" style="color: #4caf50; text-decoration: underline; font-size: 14px; margin-left: 8px;">En savoir plus</a>
+</div>
+
+<script>
+    document.getElementById('accept-cookies').addEventListener('click', function () {
+        // Ajoutez ici le code pour définir un cookie ou effectuer d'autres actions côté client
+        document.getElementById('cookie-consent-banner').style.display = 'none';
+    });
+</script>
         <main id="main">
         <div class="noel">
             <div class="container">
@@ -280,4 +294,5 @@ body, html {
         </section>
 
     </main>
+
         {% endblock %}

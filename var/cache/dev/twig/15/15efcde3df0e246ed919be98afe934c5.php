@@ -213,7 +213,7 @@ header {
                     <a href=\"/\" class=\"upper\">Accueil</a>
                     <a href=\"The\" class=\"upper\">thés</a>
                    
-                    <a href=\"\" class=\"upper\">contact</a>
+                    <a href=\"/contact\" class=\"upper\">contact</a>
                     <a href=\"/login\" class=\"upper\">Se connecter</a>
                     <a href=\"about\" class=\"upper\">notre histoire</a>
                 </nav>
@@ -225,7 +225,7 @@ header {
                     <a href=\"/\" class=\"upper\">Accueil</a>
                     <a href=\"The\" class=\"upper\">thés</a>
                    
-                    <a href=\"\" class=\"upper\">contact</a>
+                    <a href=\"/contact\" class=\"upper\">contact</a>
                     <a href=\"/login\" class=\"upper\">Se connecter</a>
                     <a href=\"about\" class=\"upper\">notre histoire</a>
                 </nav>
@@ -292,7 +292,7 @@ header {
                             <li><a href=\"about\">Notre histoire</a></li>
                             <li><a href=\"The\">Nos boutiques</a></li>
                             <li><a href=\"The\">Le thé de A à Z</a></li>
-                            <li><a href=\"\">Contactez-nous!</a></li>
+                            <li><a href=\"/contact\">Contactez-nous!</a></li>
                             
                         </ul>
                         <ul>
@@ -519,7 +519,7 @@ header {
                     <a href=\"/\" class=\"upper\">Accueil</a>
                     <a href=\"The\" class=\"upper\">thés</a>
                    
-                    <a href=\"\" class=\"upper\">contact</a>
+                    <a href=\"/contact\" class=\"upper\">contact</a>
                     <a href=\"/login\" class=\"upper\">Se connecter</a>
                     <a href=\"about\" class=\"upper\">notre histoire</a>
                 </nav>
@@ -529,7 +529,7 @@ header {
                     <a href=\"/\" class=\"upper\">Accueil</a>
                     <a href=\"The\" class=\"upper\">thés</a>
                    
-                    <a href=\"\" class=\"upper\">contact</a>
+                    <a href=\"/contact\" class=\"upper\">contact</a>
                     <a href=\"/login\" class=\"upper\">Se connecter</a>
                     <a href=\"about\" class=\"upper\">notre histoire</a>
                 </nav>
@@ -591,7 +591,7 @@ header {
                             <li><a href=\"about\">Notre histoire</a></li>
                             <li><a href=\"The\">Nos boutiques</a></li>
                             <li><a href=\"The\">Le thé de A à Z</a></li>
-                            <li><a href=\"\">Contactez-nous!</a></li>
+                            <li><a href=\"/contact\">Contactez-nous!</a></li>
                             
                         </ul>
                         <ul>

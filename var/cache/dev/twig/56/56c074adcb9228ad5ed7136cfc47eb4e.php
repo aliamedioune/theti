@@ -202,6 +202,8 @@ input[type=password]:focus {
         echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["userForm"]) || array_key_exists("userForm", $context) ? $context["userForm"] : (function () { throw new RuntimeError('Variable "userForm" does not exist.', 87, $this->source); })()), 'form_end');
         echo "
 </div>
+
+
 ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -316,6 +318,8 @@ input[type=password]:focus {
         <button type=\"submit\" class=\"btn btn-success\">Enregistrer</button>
     {{ form_end(userForm) }}
 </div>
+
+
 {% endblock %}
 ", "admin/new.html.twig", "C:\\Users\\ASUS ROG STRIX\\Desktop\\bac+5\\apprendre\\Nouveau dossier\\Tiptop101123\\Tiptop\\Tiptop\\templates\\admin\\new.html.twig");
     }

@@ -2,6 +2,9 @@
 
 namespace App\Controller;
 
+
+
+
 use Doctrine\ORM\EntityManagerInterface;
 use App\Repository\DistributedTicketsRepository;
 use App\Repository\TicketsRepository;
@@ -299,10 +302,49 @@ class AdminController extends AbstractController
     public function dowloadletter()
     {
               
+                // Fetch all users from the UserRepository
+            $users = $this->userRepository->findAll();
+            
+            // Render the HTML view with the users data
+            $html = $this->renderView('admin/list.html.twig', [
+                'users' => $users,
+            ]);
+        
+            // Create a Dompdf instance and set options
+            $options = new Options();
+            $options->set('isHtml5ParserEnabled', true);
+            $options->set('isPhpEnabled', true);
+
+            $dompdf = new Dompdf($options);
+
+            // Set paper size to A4 and orientation to portrait
+            $dompdf->setPaper('A4', 'portrait');
+
+            // Load HTML content
+            $dompdf->loadHtml($html);
+
+            // Render the PDF
+            $dompdf->render();
+            
+            // Stream the generated PDF as a response
+            return new Response(
+                $dompdf->stream('resume.pdf', ["Attachment" => false]),
+                Response::HTTP_OK,
+                ['Content-Type' => 'application/pdf']
+            );
+    }
+
+    /**
+     * @IsGranted("ROLE_ADMIN")
+     * @Route("/admin/userDownload", name="userMails")
+     */
+    public function dowloadluser()
+    {
+              
         $users = $this->userRepository->findAll();
         
        
-        $html = $this->renderView('admin/list.html.twig', [
+        $html = $this->renderView('admin/userdownload.html.twig', [
             'users' =>$users, ]);
      
             $dompdf = new Dompdf();

@@ -54,7 +54,7 @@ class __TwigTemplate_1c13cc249230735b1c383d07c72b5140 extends Template
 
     }
 
-    // line 5
+    // line 6
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -64,7 +64,7 @@ class __TwigTemplate_1c13cc249230735b1c383d07c72b5140 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 6
+        // line 7
         echo "        <style>
         #choix {
   text-align: center;
@@ -165,7 +165,7 @@ class __TwigTemplate_1c13cc249230735b1c383d07c72b5140 extends Template
     }
 
     ";
-        // line 106
+        // line 107
         echo "body, html {
   margin: 0;
   padding: 0;
@@ -209,9 +209,22 @@ class __TwigTemplate_1c13cc249230735b1c383d07c72b5140 extends Template
 }
 
 
-        </style>
-        
 
+        </style>
+                    
+            
+<div id=\"cookie-consent-banner\" style=\"background-color: #f1f1f1; padding: 8px; position: fixed; bottom: 0; width: 20%; text-align: center;\">
+    <p>Ce site utilise des cookies. En continuant à naviguer, vous acceptez notre utilisation des cookies.</p>
+    <button id=\"accept-cookies\" style=\"background-color: #4caf50; color: white; padding: 4px 8px; border: none; border-radius: 3px; cursor: pointer; font-size: 14px;\">Accepter</button>
+    <a href=\"\" style=\"color: #4caf50; text-decoration: underline; font-size: 14px; margin-left: 8px;\">En savoir plus</a>
+</div>
+
+<script>
+    document.getElementById('accept-cookies').addEventListener('click', function () {
+        // Ajoutez ici le code pour définir un cookie ou effectuer d'autres actions côté client
+        document.getElementById('cookie-consent-banner').style.display = 'none';
+    });
+</script>
         <main id=\"main\">
         <div class=\"noel\">
             <div class=\"container\">
@@ -219,18 +232,18 @@ class __TwigTemplate_1c13cc249230735b1c383d07c72b5140 extends Template
                     <ul class=\"slides\">
                     <li> 
                         <img src=\"";
-        // line 158
+        // line 172
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/img/slider/11.jpg"), "html", null, true);
         echo "\" alt=\"jeu concour participer \"/>
                     </li>
                     <li>
                         <img src=\"";
-        // line 161
+        // line 175
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/img/slider/22.jpg"), "html", null, true);
         echo "\"  alt=\"the categorie\"/>
                     </li>
                     ";
-        // line 166
+        // line 180
         echo "                    </ul>
                 </div>
              <h1>Coffret Découverte de 39€ à remporter !</h1>
@@ -240,14 +253,14 @@ class __TwigTemplate_1c13cc249230735b1c383d07c72b5140 extends Template
 
 
                 <img class =\"offre\"src=\"";
-        // line 174
+        // line 188
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/img/offre-noel.jpg"), "html", null, true);
         echo "\" alt=\"offert thé\">
                 <a href=\"/login\" > <button type=\"button\" onclick=\"window.location.href='/login\">Participer</button> </p>
 
                 <p>*Pour toute commande effectué avant le 20 décembre</p>
                 ";
-        // line 191
+        // line 205
         echo "            </div>
                 
         </div> 
@@ -265,7 +278,7 @@ class __TwigTemplate_1c13cc249230735b1c383d07c72b5140 extends Template
                 <div class =\"fig\">
                     <figure>
                         <img src=\"";
-        // line 207
+        // line 221
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/img/tea/1.jpg"), "html", null, true);
         echo "\" alt=\"Thé noir\">
                         <figcaption>Thé noir</figcaption>
@@ -273,7 +286,7 @@ class __TwigTemplate_1c13cc249230735b1c383d07c72b5140 extends Template
                     </figure>
                     <figure>
                         <img src=\"";
-        // line 212
+        // line 226
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/img/tea/2.jpg"), "html", null, true);
         echo "\" alt=\"Thé vert\">
                         <figcaption>Thé vert</figcaption>
@@ -281,7 +294,7 @@ class __TwigTemplate_1c13cc249230735b1c383d07c72b5140 extends Template
                     </figure>
                     <figure>
                         <img src=\"";
-        // line 217
+        // line 231
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/img/tea/3.jpg"), "html", null, true);
         echo "\" alt=\"Oolong\">
                         <figcaption>Oolong</figcaption>
@@ -289,7 +302,7 @@ class __TwigTemplate_1c13cc249230735b1c383d07c72b5140 extends Template
                     </figure>
                     <figure>
                         <img src=\"";
-        // line 222
+        // line 236
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/img/tea/4.jpg"), "html", null, true);
         echo "\" alt=\"Thé blanc\">
                         <figcaption>Thé blanc</figcaption>
@@ -297,7 +310,7 @@ class __TwigTemplate_1c13cc249230735b1c383d07c72b5140 extends Template
                     </figure>
                     <figure>
                         <img src=\"";
-        // line 227
+        // line 241
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/img/tea/5.jpg"), "html", null, true);
         echo "\" alt=\"Rooibos\">
                         <figcaption>Rooibos</figcaption>
@@ -318,7 +331,7 @@ class __TwigTemplate_1c13cc249230735b1c383d07c72b5140 extends Template
                         <h3><span>Notre nouveauté</span></h3>
                         <figure>
                             <img src=\"";
-        // line 245
+        // line 259
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/img/product/product1.jpg"), "html", null, true);
         echo "\" alt=\"Thé du hammam\">
                             <figcaption>Thé du hammam</figcaption>
@@ -333,7 +346,7 @@ class __TwigTemplate_1c13cc249230735b1c383d07c72b5140 extends Template
                         <h3><span>Notre best-seller</span></h3>
                         <figure>
                             <img src=\"";
-        // line 257
+        // line 271
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/img/product/product2.jpg"), "html", null, true);
         echo "\" alt=\"Infusion Herboriste\">
                             <figcaption>Infusion Herboriste</figcaption>
@@ -348,7 +361,7 @@ class __TwigTemplate_1c13cc249230735b1c383d07c72b5140 extends Template
                         <h3><span>Notre coup de coeur</span></h3>
                         <figure>
                             <img src=\"";
-        // line 269
+        // line 283
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/img/product/product3.jpg"), "html", null, true);
         echo "\" alt=\"Blue of London\">
                             <figcaption>Blue of London</figcaption>
@@ -364,6 +377,7 @@ class __TwigTemplate_1c13cc249230735b1c383d07c72b5140 extends Template
         </section>
 
     </main>
+
         ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -385,12 +399,13 @@ class __TwigTemplate_1c13cc249230735b1c383d07c72b5140 extends Template
 
     public function getDebugInfo()
     {
-        return array (  352 => 269,  337 => 257,  322 => 245,  301 => 227,  293 => 222,  285 => 217,  277 => 212,  269 => 207,  251 => 191,  244 => 174,  234 => 166,  229 => 161,  223 => 158,  169 => 106,  68 => 6,  58 => 5,  35 => 1,);
+        return array (  365 => 283,  350 => 271,  335 => 259,  314 => 241,  306 => 236,  298 => 231,  290 => 226,  282 => 221,  264 => 205,  257 => 188,  247 => 180,  242 => 175,  236 => 172,  169 => 107,  68 => 7,  58 => 6,  35 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("{% extends 'base.html.twig' %} 
+
 
 
 
@@ -538,9 +553,22 @@ body, html {
 }
 
 
-        </style>
-        
 
+        </style>
+                    
+            
+<div id=\"cookie-consent-banner\" style=\"background-color: #f1f1f1; padding: 8px; position: fixed; bottom: 0; width: 20%; text-align: center;\">
+    <p>Ce site utilise des cookies. En continuant à naviguer, vous acceptez notre utilisation des cookies.</p>
+    <button id=\"accept-cookies\" style=\"background-color: #4caf50; color: white; padding: 4px 8px; border: none; border-radius: 3px; cursor: pointer; font-size: 14px;\">Accepter</button>
+    <a href=\"\" style=\"color: #4caf50; text-decoration: underline; font-size: 14px; margin-left: 8px;\">En savoir plus</a>
+</div>
+
+<script>
+    document.getElementById('accept-cookies').addEventListener('click', function () {
+        // Ajoutez ici le code pour définir un cookie ou effectuer d'autres actions côté client
+        document.getElementById('cookie-consent-banner').style.display = 'none';
+    });
+</script>
         <main id=\"main\">
         <div class=\"noel\">
             <div class=\"container\">
@@ -672,6 +700,7 @@ body, html {
         </section>
 
     </main>
+
         {% endblock %}", "home/Homepage.html.twig", "C:\\Users\\ASUS ROG STRIX\\Desktop\\bac+5\\apprendre\\Nouveau dossier\\Tiptop101123\\Tiptop\\Tiptop\\templates\\home\\Homepage.html.twig");
     }
 }

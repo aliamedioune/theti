@@ -242,7 +242,7 @@ class __TwigTemplate_8b6fe5584d48d48172552c391247b82f extends Template
                                 <a href=\"";
         // line 92
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("Mails");
-        echo "\" class=\"btn btn-success\">Télécharger</a>
+        echo "\" class=\"btn btn-success\"  target=\"_blank\">Télécharger</a>
                             </div>
                         </div>
                     </div>
@@ -503,7 +503,7 @@ class __TwigTemplate_8b6fe5584d48d48172552c391247b82f extends Template
                             <div class=\"col-12 contentUserGain\" id=\"blockUserGain\">
                                 <p> <b>{{ newsLetterCustomerNB }} </b> clients qui ce sont inscris à la newsletter.</p>
                                 <p>Télécharger un fichier CSV contenant leurs email :</p>
-                                <a href=\"{{path('Mails')}}\" class=\"btn btn-success\">Télécharger</a>
+                                <a href=\"{{path('Mails')}}\" class=\"btn btn-success\"  target=\"_blank\">Télécharger</a>
                             </div>
                         </div>
                     </div>
