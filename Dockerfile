@@ -1,12 +1,21 @@
-FROM jwilder/nginx-proxy
+# Utilisez une image Symfony prête à l'emploi
+FROM php:7.4-apache
 
-RUN apt-get update
-RUN apt-get install vim -y
-RUN apt-get install openssl
-COPY . /usr/share/nginx/html
-COPY app.conf /etc/nginx/conf.d/app.conf
-COPY nginx.conf /etc/nginx/nginx.conf
+# Installez les dépendances nécessaires (si nécessaire)
+RUN apt-get update && \
+    apt-get install -y git unzip
 
-RUN echo "upstream php-upstream { server php:9000; }" > /etc/nginx/conf.d/upstream.conf
+# Créez un répertoire de travail
+WORKDIR /var/www/html
 
-CMD ["nginx", "-g", "daemon off;"]
+# Clonez votre projet depuis GitHub
+RUN git clone https://github.com/aliamedioune/theti.git .
+
+# Installez les dépendances Symfony
+RUN composer install --no-scripts --no-interaction
+
+# Exposez le port 80 pour Apache
+EXPOSE 80
+
+# Démarrez Apache
+CMD ["apache2-foreground"]
