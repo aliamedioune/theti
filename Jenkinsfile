@@ -15,6 +15,7 @@ steps {
     sh 'sudo chmod 777 -R /var/run/docker.sock'
     sh 'sudo chmod 777 -R /var/lib/jenkins/workspace/CICD/'
     sh 'cd /var/lib/jenkins/workspace/CICD/ && docker-compose down'
+
 }
 }
 
