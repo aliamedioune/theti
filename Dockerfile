@@ -25,8 +25,8 @@ COPY . .
 # RUN chmod -R 755 /var/www/html/var
 
 # Expose port 8000 to the outside world
-EXPOSE 8000
+EXPOSE 8001
 
 # Start the Symfony server
-CMD ["php", "-S", "0.0.0.0:8000", "-t", "public"]
+CMD ["php", "-S", "0.0.0.0:8001", "-t", "public"]
 #
