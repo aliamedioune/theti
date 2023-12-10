@@ -33,7 +33,7 @@ pipeline {
             steps {
                 echo 'Cloning repository...'
                 script {
-                    checkout([$class: 'GitSCM', branches: [[name: 'dev']], 
+                    checkout([$class: 'GitSCM', branches: [[name: 'master']], 
                               doGenerateSubmoduleConfigurations: false, 
                               extensions: [[$class: 'RelativeTargetDirectory', 
                                             relativeTargetDir: '']], 
