@@ -21,8 +21,8 @@ RUN apt-get update && apt-get install -y \
 COPY . .
 
 # Set permissions if needed
-# RUN chown -R www-data:www-data /var/www/html
-# RUN chmod -R 755 /var/www/html/var
+RUN chown -R www-data:www-data /var/www/html
+RUN chmod -R 755 /var/www/html/var
 
 # Expose port 8000 to the outside world
 EXPOSE 8000
