@@ -62,7 +62,9 @@ pipeline {
                     sh "docker-compose -f $DOCKER_COMPOSE_FILE up -d"
                 }
                 echo 'Clearing Symfony cache...'
-                
+                script {
+                    sh 'docker exec symfony_app2 php bin/console cache:clear'
+                }
                 
             }
         }
